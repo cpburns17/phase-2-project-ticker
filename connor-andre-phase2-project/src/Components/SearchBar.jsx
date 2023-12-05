@@ -1,26 +1,44 @@
 import React, {useState} from "react"
 import App from "./App"
 import SearchResults from "./SearchResults";
+import { useOutletContext, useNavigate } from "react-router-dom";
 
-function SearchBar ({handleSearch, search}) {
-//     const [searchText, setSearchText] = useState('')
+function SearchBar () {
+    const {search} = useOutletContext()
+    const {handleSearch} = useOutletContext()
+    const {filteredStocks} = useOutletContext()
+    
+    const navigate = useNavigate() 
 
-// handleSearch(searchText)
+    function handleClick (stock) {
+        navigate('/stockdetails', {state: stock})
+    }
 
-return (
-    <div>
-        <div className="company search">
-            <input 
-            className="prompt"
-            placeholder="Search by company name"
-            // value={searchText}
-            // onChange={() => setSearchText(e.target.value)} 
-            />
-            <i className="search box" />
+    function handleSearchChange(e){
+        handleSearch(e.target.value)
+    }
+
+    const listSearch = filteredStocks.map((stock)=>{
+        return <div>
+            <h1 onClick={() => handleClick(stock)}>{stock.ticker}</h1>
         </div>
-        <SearchResults search={search}/>
-    </div>
-)
-}
-
+    })
+    
+    
+    return (
+    
+        <div>
+            <div className="company search">
+                <input 
+                onChange={handleSearchChange}
+                className="prompt"
+                placeholder="Search by company name"
+                value={search}
+                />
+                <i className="search box" />
+        </div>
+            {listSearch}
+        </div>
+    )
+    }
 export default SearchBar;

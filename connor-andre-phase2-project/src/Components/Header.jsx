@@ -8,14 +8,14 @@ function Header() {
   return (
     <div className="header">
       <nav>
-        <NavLink className={cssClass} to="/">
+        <NavLink id="home"className={cssClass} to="/">
           Home
         </NavLink>
-        <NavLink className={cssClass} to="/savedstocks">
-          Matches
-        </NavLink>
-        <NavLink className={cssClass} to="/search">
+        <NavLink id="search"className={cssClass} to="/search">
           Search
+        </NavLink>
+        <NavLink id="matches"className={cssClass} to="/savedstocks">
+          Matches
         </NavLink>
       </nav>
     </div>
