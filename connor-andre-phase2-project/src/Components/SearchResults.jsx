@@ -1,12 +1,11 @@
 import React from "react";
 import App from "./App"
 
-function SearchResults() {
+function SearchResults({search}) {
 
 return (
     <div>
-        List of stocks
-        Do we want to add a Filter?
+        {search}
     </div>
 )
 }

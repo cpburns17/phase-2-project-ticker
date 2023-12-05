@@ -4,6 +4,7 @@ import StockCard from "./StockCard";
 
 function StockContainer ({stocks}) {
 
+
     // const renderStocks = stocks.map((stock) => 
     // <StockCard stock={stock}/>)
 

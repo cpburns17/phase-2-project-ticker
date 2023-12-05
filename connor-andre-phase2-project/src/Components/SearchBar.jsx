@@ -1,8 +1,11 @@
-import React from "react"
+import React, {useState} from "react"
 import App from "./App"
 import SearchResults from "./SearchResults";
 
-function SearchBar () {
+function SearchBar ({handleSearch, search}) {
+//     const [searchText, setSearchText] = useState('')
+
+// handleSearch(searchText)
 
 return (
     <div>
@@ -10,11 +13,12 @@ return (
             <input 
             className="prompt"
             placeholder="Search by company name"
-            value=""
+            // value={searchText}
+            // onChange={() => setSearchText(e.target.value)} 
             />
             <i className="search box" />
         </div>
-        <SearchResults />
+        <SearchResults search={search}/>
     </div>
 )
 }
