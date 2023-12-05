@@ -18,6 +18,7 @@ function StockCard ({stocks}) {
     const [stockData, setStockData] = useState([])
     const [image, setImage] = useState('https://static.dezeen.com/uploads/2017/08/tinder-redesign-graphics_dezeen_sq-1.jpg')
     const [price, setPrice] = useState('')
+    const [volume, setVolume] = useState('')
 
 
 
@@ -41,7 +42,8 @@ function StockCard ({stocks}) {
             .then(res=> res.json())
             .then(data => {
                 console.log(data)
-                setPrice(data)
+                setPrice(data.close)
+                setVolume(data.volume)
             }) 
     }
     
@@ -95,6 +97,33 @@ function StockCard ({stocks}) {
         setFrontCard(!frontCard)
     }
 
+    function handleLike(){
+
+        const likedStock = {
+            name : stockData.name,
+            ticker : stockData.ticker,
+            price : price,
+            volume : volume,
+            image : image,
+            home_page_url : stockData.homepage_url,
+            market_cap: stockData.market_cap
+        }
+
+        fetch('http://localhost:3000/stocks',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(likedStock)
+        })
+        .then((res)=>res.json())
+        .then((data)=>{
+            console.log(data)
+        })
+        randomStock()
+    }
+
+
 return (
     <div>  
  {welcomePage ? (
@@ -120,7 +149,7 @@ return (
         <div className="stock-info">
             <h2>{stockData.name}</h2>
             <h2>{stockData.ticker}</h2>
-            <h2>Price: ${price.close} {stockData.currency_name}</h2>
+            <h2>Price: ${price} {stockData.currency_name}</h2>
             <p>Description {stockData.description}</p>
         </div>
     </div> ) 
@@ -130,7 +159,7 @@ return (
     <div className="stock-pic">
         <img alt="card-back" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
         <div className="stock-info">
-            <p>Volume: {price.volume}</p>
+            <p>Volume: {volume}</p>
             <p>TradeHistory</p>
             <p>CompanyInfo</p>    
         </div>       
@@ -138,7 +167,7 @@ return (
 
     <div className="likes-button">
         <button onClick={() => randomStock()}> Dislike Button </button>
-        <button> Like Button </button>
+        <button onClick={handleLike}>Like Button</button>
     </div>
 </div>) }
 
