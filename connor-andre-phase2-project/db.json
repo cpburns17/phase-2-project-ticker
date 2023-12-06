@@ -1,14 +1,68 @@
 {
   "stocks": [
     {
-      "name": "Brookfield Infrastructure Partners L.P. Limited Partnership Units",
-      "ticker": "BIP",
-      "price": 26.87,
-      "volume": 1166848,
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmJpcC5icm9va2ZpZWxkLmNvbQ/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.bip.brookfield.com",
-      "market_cap": 12468306008.380001,
-      "id": 1
+      "name": "McEwen Mining Inc.",
+      "ticker": "MUX",
+      "price": 30.4,
+      "volume": 1305538,
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lm1jZXdlbm1pbmluZy5jb20/images/2023-05-01_logo.png",
+      "home_page_url": "https://www.mcewenmining.com",
+      "market_cap": 359988367.02,
+      "id": 5
+    },
+    {
+      "name": "Fortune Brands Innovations, Inc.",
+      "ticker": "FBIN",
+      "price": 121.97,
+      "volume": 75444,
+      "description": "Fortune Brands Innovations is a leading home and security products company that operates two segments. The company's $2.6 billion plumbing segment, led by the Moen brand, sells faucets, showers, and other plumbing fixtures, and the $2.2 billion outdoors and security segment sells entry doors under the Therma-Tru brand name, Fiberon-branded patio decking, and locks and other security devices under the Master Lock and SentrySafe brand names.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmZiaW4uY29t/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.fbin.com",
+      "market_cap": 9217289605.374,
+      "id": 8
+    },
+    {
+      "name": "FREYR Battery",
+      "ticker": "FREY",
+      "price": 29.83,
+      "volume": 4795902,
+      "description": "FREYR Battery is an emerging producer of clean battery solutions for the planet. It designs and manufactures high-density and cost-competitive lithium-ion batteries with a reduced carbon footprint for the markets for electric mobility, stationary energy storage, and marine and aviation applications.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmZyZXlyYmF0dGVyeS5jb20/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.freyrbattery.com",
+      "market_cap": 288491308.21,
+      "id": 9
+    },
+    {
+      "name": "Molina Healthcare, Inc.",
+      "ticker": "MOH",
+      "price": 2.02,
+      "volume": 7192899,
+      "description": "Molina Healthcare Inc offers healthcare plans focused on Medicaid-related solutions for low-income families and individuals. Its health plans are operated by a network of subsidiaries, each of which is licensed as a health maintenance organization (HMO). In addition to its Health Plans segment, Molina has a Medicaid,Medicare, and Marketplace segment that represent the government-funded or sponsored programs under their management information systems. Molina's Medicaid plans receive revenue on a per-member per-month basis from state government agencies, and its Medicare Advantage plans receive revenue from managed care plans that contract with the Centers for Medicaid and Medicare (CMS). Molina also provides plans through health insurance exchanges.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lm1vbGluYWhlYWx0aGNhcmUuY29t/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.molinahealthcare.com",
+      "market_cap": 21090025000,
+      "id": 10
+    },
+    {
+      "name": "Alamo Group, Inc.",
+      "ticker": "ALG",
+      "description": "Alamo Group Inc is engaged in the design and manufacturing of agricultural equipment and infrastructure maintenance equipment. Its products include tractor-mounted mowing and other vegetation maintenance equipment, street sweepers, excavators, vacuum trucks, snow removal equipment, leaf collection equipment, pothole patchers, zero-turn radius mowers, agricultural implements, and related aftermarket parts. The company's reportable segments are Vegetation Management and Industrial Equipment. It generates a majority of its revenue from Vegetation Management. Geographically, the company generates majority of the revenue from the United States.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmFsYW1vLWdyb3VwLmNvbQ/images/2023-05-01_logo.png",
+      "home_page_url": "https://www.alamo-group.com",
+      "market_cap": 2248965756.63,
+      "id": 11
+    },
+    {
+      "name": "CHEGG, INC.",
+      "ticker": "CHGG",
+      "price": 10.27,
+      "volume": 1775040,
+      "description": "Chegg Inc is an American educational services company. The Chegg platform provides products and services to support learners with their academic course materials, as well as their career and personal skills development. The company's service and product offerings fall into two categories: Subscription Services, which encompasses Chegg Study Pack, Chegg Study, Chegg Writing, Chegg Math, and Busuu offerings that can be accessed internationally through the company's websites and on mobile devices, and Skills and Other, which encompasses skills, advertising services, print textbooks and eTextbooks offerings.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmNoZWdnLmNvbQ/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.chegg.com",
+      "market_cap": 1205054367.46,
+      "sic_description": "SERVICES-EDUCATIONAL SERVICES",
+      "id": 12
     }
   ]
 }

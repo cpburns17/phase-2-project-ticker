@@ -33,7 +33,7 @@ const routes = createBrowserRouter([
 
         {
           path:"/stockdetails",
-          element: <StockCard />,
+          element: <StockCard />
         },
         {
           path: "/stockmetrics",

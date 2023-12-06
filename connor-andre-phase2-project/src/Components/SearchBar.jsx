@@ -26,15 +26,15 @@ function SearchBar () {
     
     return (
     
-        <div>
-            <div className="company search">
+        <div className="search-bar">
+            <div >
                 <input 
                 onChange={handleSearchChange}
                 className="prompt"
-                placeholder="Search by company name"
+                placeholder="Search by ticker symbol.."
                 value={search}
                 />
-                <i className="search box" />
+                <i className="search-box" />
         </div>
             {listSearch}
         </div>

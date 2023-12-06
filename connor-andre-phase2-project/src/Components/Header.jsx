@@ -1,21 +1,28 @@
 import React from "react";
+import ReactDOM from 'react-dom'
+import StockCard from "./StockCard"
 import { NavLink } from "react-router-dom";
 
+import { FaHome } from "react-icons/fa";
+import { FaFire } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+
+
+
 function Header() {
-  const cssClass = ({ isActive, isPending }) =>
-    isPending ? "pending" : isActive ? "active" : "navlink";
+
 
   return (
     <div className="header">
       <nav>
-        <NavLink id="home"className={cssClass} to="/">
-          Home
+        <NavLink id="home" to="/">
+          <FaHome />
         </NavLink>
-        <NavLink id="search"className={cssClass} to="/search">
-          Search
+        <NavLink id="search" to="/search">
+          <FaSearch />
         </NavLink>
-        <NavLink id="matches"className={cssClass} to="/savedstocks">
-          Matches
+        <NavLink id="matches" to="/savedstocks">
+          <FaFire />
         </NavLink>
       </nav>
     </div>

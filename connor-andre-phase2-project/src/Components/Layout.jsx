@@ -1,6 +1,6 @@
 
 import Header from "./Header";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 import {Outlet} from "react-router-dom"
 import {useState, useEffect} from "react"
 
@@ -10,6 +10,11 @@ function Layout () {
     const [stocks, setStocks] = useState([])
     const [errors, setErrors] = useState(null)
     const [search, setSearch] = useState("")
+
+    function renderDelete(deleteStock) {
+        setStocks(stocks.filter((stock) => stock.id != deleteStock.id))
+    }
+
 
     useEffect(() => {
         fetch('https://api.polygon.io/v3/reference/tickers?type=CS&market=stocks&exchange=XNYS&active=true&limit=1000&sort=ticker&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ')
@@ -49,8 +54,8 @@ function Layout () {
     }, [])
 
     const cleanArray = [new Set(stocks)]
-
-    function handleSearch(searchTerm){ 
+    
+    function handleSearch(searchTerm){
         setSearch(searchTerm)
     }
 
@@ -62,9 +67,9 @@ function Layout () {
     <>
         < Header />
         <div className="main">
-            <Outlet context={{stocks, setStocks, handleSearch, filteredStocks, search}}/>
+            <Outlet context={{stocks, setStocks, handleSearch, filteredStocks, search, renderDelete}}/>
         </div>
-        {/* <Footer /> */}
+        <Footer />
     </>
   )
 }
