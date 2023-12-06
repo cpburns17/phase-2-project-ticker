@@ -51,6 +51,18 @@
       "home_page_url": "https://www.alamo-group.com",
       "market_cap": 2248965756.63,
       "id": 11
+    },
+    {
+      "name": "CHEGG, INC.",
+      "ticker": "CHGG",
+      "price": 10.27,
+      "volume": 1775040,
+      "description": "Chegg Inc is an American educational services company. The Chegg platform provides products and services to support learners with their academic course materials, as well as their career and personal skills development. The company's service and product offerings fall into two categories: Subscription Services, which encompasses Chegg Study Pack, Chegg Study, Chegg Writing, Chegg Math, and Busuu offerings that can be accessed internationally through the company's websites and on mobile devices, and Skills and Other, which encompasses skills, advertising services, print textbooks and eTextbooks offerings.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmNoZWdnLmNvbQ/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.chegg.com",
+      "market_cap": 1205054367.46,
+      "sic_description": "SERVICES-EDUCATIONAL SERVICES",
+      "id": 12
     }
   ]
 }

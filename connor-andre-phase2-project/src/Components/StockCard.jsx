@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import App from "./App"
 import "./index.css"
 
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { GoHeartFill } from "react-icons/go";
 import { RxCross1 } from "react-icons/rx";
 
@@ -19,6 +19,7 @@ function StockCard ({stocks}) {
     const [image, setImage] = useState('https://static.dezeen.com/uploads/2017/08/tinder-redesign-graphics_dezeen_sq-1.jpg')
     const [price, setPrice] = useState('')
     const [volume, setVolume] = useState('')
+    const [sic, setSic] = useState('')
 
 
 
@@ -63,11 +64,12 @@ function StockCard ({stocks}) {
 
             fetch(`https://api.polygon.io/v3/reference/tickers/${state.ticker}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
             .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        setImage(data.results.branding.logo_url)
-        setStockData(data.results)
-    })
+            .then(data => {
+            console.log(data)
+            setImage(data.results.branding.logo_url)
+            setStockData(data.results)
+            setSic(data.results.sic_description)
+            })
         }, [])}
 
      
@@ -91,7 +93,8 @@ function StockCard ({stocks}) {
             description : stockData.description,
             image : image,
             home_page_url : stockData.homepage_url,
-            market_cap: stockData.market_cap
+            market_cap: stockData.market_cap,
+            sic_description: sic
         }
 
         fetch('http://localhost:3000/stocks',{
@@ -110,7 +113,32 @@ function StockCard ({stocks}) {
         randomStock()
     }
 
+    function numberWithCommas(x) {
+        Math.ceil(x * 100) / 100
+        if(x/1000 < 1000){
+            return `${Math.ceil(((x/1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))*1000)/1000}k`
+        } else if(x/1000000 < 1000){
+            return `${Math.ceil(((x/1000000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))*1000)/1000}m`
+        } else if (x/1000000000 < 1000) {
+            return `${Math.ceil(((x/1000000000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))*1000)/1000}b`  
+        } else if (x/1000000000000 < 1000){
+            return `${Math.ceil(((x/1000000000000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))*1000)/1000}t`
+        }
+    }
 
+    const navigate = useNavigate() 
+
+    function handleMetrics () {
+        const stockMetrics = {
+            name : stockData.name,
+            ticker : stockData.ticker,
+            price : price,
+            image : image,
+            home_page_url : stockData.homepage_url,
+            market_cap: stockData.market_cap
+        }
+        navigate('/stockmetrics', {state: stockMetrics})
+    }
 
 return (
 <div className="card">  
@@ -137,6 +165,7 @@ return (
                 <img alt="card-front" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
                 <div className="stock-details">
                     <h2 className="stock-name">{stockData.name} ({stockData.ticker})</h2>
+                    <h2>{sic}</h2>
                     <h2>Price: ${price} {stockData.currency_name}</h2>
                 </div>
             </div> ) 
@@ -146,17 +175,16 @@ return (
             <div className="stock-pic">
                 <img alt="card-back" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
                 <div className="stock-details">
-                    <p>Volume: {volume}</p>
-                    <p>TradeHistory</p>
-                    <p>Company Bio: {stockData.description}</p>  
+                    <p>Volume: ${numberWithCommas(volume)} {(stockData.currency_name)}</p>
+                    <p>Market Cap: {numberWithCommas(stockData.market_cap)}</p>
+                    <p>Description: {stockData.description}</p>
+                    <button onClick={() => handleMetrics(stockData)}>See Company's Metrics</button>  
                 </div>       
             </div> )}
 
             <div className="buttons">
                 <button onClick={() => randomStock()} className="dislike"> <RxCross1 /> </button>
                 <button onClick={handleLike} className="like"> <GoHeartFill color="rgb(24, 204, 114)" /> </button>
-                
-
             </div>
         </div>) }
 </div> 
