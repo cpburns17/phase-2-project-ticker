@@ -24,7 +24,7 @@ useEffect(() => {
 
 return (
     <div className="saved-list">
-        <h1 
+        <h1
         className= "matches"> {savedStocks.map(stock => <Stock stock={stock} renderDelete={renderDelete} />)} 
         </h1>
             

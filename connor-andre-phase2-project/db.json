@@ -63,6 +63,42 @@
       "market_cap": 1205054367.46,
       "sic_description": "SERVICES-EDUCATIONAL SERVICES",
       "id": 12
+    },
+    {
+      "name": "Flotek Industries, Inc.",
+      "ticker": "FTK",
+      "price": 3.18,
+      "volume": 166427,
+      "description": "Flotek Industries Inc delivers chemistry-based technology solutions for energy, industrial, and consumer applications. It develops and supplies chemistry and services to the oil and gas industries, and high-value compounds to companies that make food and beverages, cleaning products, cosmetics, and others. The company operates in the Chemistry Technologies segment which designs, develops, manufactures, packages, and markets chemistries that market specialty chemicals. Its Data Analytics segment enables users to maximize the value of their hydrocarbon-associated processes by providing analytics associated with the streams in seconds rather than minutes or days.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmZsb3Rla2luZC5jb20/images/2023-05-01_logo.png",
+      "home_page_url": "https://www.flotekind.com",
+      "market_cap": 96403966.75,
+      "sic_description": "",
+      "id": 13
+    },
+    {
+      "name": "Kilroy Realty Corp.",
+      "ticker": "KRC",
+      "price": 35.99,
+      "volume": 1074231,
+      "description": "Kilroy Realty is a premier owner and landlord of approximately 16 million square feet of office space across Los Angeles, San Diego, the San Francisco Bay Area, and greater Seattle. The company operates as a real estate investment trust.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmtpbHJveXJlYWx0eS5jb20/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.kilroyrealty.com",
+      "market_cap": 4289795427.2200003,
+      "sic_description": "",
+      "id": 14
+    },
+    {
+      "name": "DuPont de Nemours, Inc. Common Stock",
+      "ticker": "DD",
+      "price": 71.76,
+      "volume": 4455280,
+      "description": "DuPont is a diversified global specialty chemicals company created in 2019 as a result of the DowDuPont merger and subsequent separations. Its portfolio includes specialty chemicals and downstream products that serve the electronics and communication, automotive, construction, safety and protection, and water management industries. DuPont benefits from the ability to produce patented specialty chemicals that command pricing power. Noteworthy products include Kevlar, Tyvek, and Nomex, which have evolved over time to enable a wide range of applications across multiple industries.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmR1cG9udC5jb20/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.dupont.com",
+      "market_cap": 30373901209.96,
+      "sic_description": "PLASTIC MATERIALS, SYNTH RESINS & NONVULCAN ELASTOMERS",
+      "id": 15
     }
   ]
 }

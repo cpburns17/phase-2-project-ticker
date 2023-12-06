@@ -5,6 +5,9 @@ import "./index.css"
 import { useLocation, useNavigate } from "react-router-dom"
 import { GoHeartFill } from "react-icons/go";
 import { RxCross1 } from "react-icons/rx";
+import { FaFire } from "react-icons/fa";
+
+
 
 
 
@@ -146,16 +149,15 @@ return (
         <div className="stock-welcome">
                 <img alt="card-welcome" src={'https://static.dezeen.com/uploads/2017/08/tinder-redesign-graphics_dezeen_sq-1.jpg'}  />
             <div className="stock-welcome-info">
-                <h2>Welcome to Ticker!</h2>
-                <h2>The #1 Stock Matchmaker</h2>
-                <h2></h2>
+                <h4>Welcome to Ticker!</h4>
+                <h4>The #1 Stock Matchmaker</h4>
                 <p>Instructions:
                     Everytime you click - you'll be matched with a new, random stock. Click on the stock picture to see detailed information about the stocks trade history, trade volume, and company information. If you want to invest in this stock, click the likes button to add it to your "Matches" list. 
                     Looking for a specific stock in particular? Use the "Search" bar to search by the company's ticker symbol.
                     
                     To get started, click below!
                 </p>
-                <button onClick={renderWelcome}>Begin!</button>
+                <button className="button-5"onClick={renderWelcome}> Begin </button>
             </div>
         </div>
     ) : (    
@@ -178,7 +180,7 @@ return (
                     <p>Volume: ${numberWithCommas(volume)} {(stockData.currency_name)}</p>
                     <p>Market Cap: {numberWithCommas(stockData.market_cap)}</p>
                     <p>Description: {stockData.description}</p>
-                    <button onClick={() => handleMetrics(stockData)}>See Company's Metrics</button>  
+                    <button className="button-4" onClick={() => handleMetrics(stockData)}>See Company's Metrics</button>  
                 </div>       
             </div> )}
 

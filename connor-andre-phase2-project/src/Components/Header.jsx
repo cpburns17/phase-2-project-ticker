@@ -15,11 +15,11 @@ function Header() {
   return (
     <div className="header">
       <nav>
-        <NavLink id="home" to="/">
-          <FaHome />
-        </NavLink>
         <NavLink id="search" to="/search">
           <FaSearch />
+        </NavLink>
+        <NavLink id="home" to="/">
+          <FaHome />
         </NavLink>
         <NavLink id="matches" to="/savedstocks">
           <FaFire />
