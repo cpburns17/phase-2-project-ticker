@@ -7,6 +7,7 @@ import Layout from "./Layout"
 import SavedStocks from "./SavedStocks";
 import SearchBar from "./SearchBar";
 import StockCard from "./StockCard";
+import Metrics from "./Metrics"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -32,10 +33,12 @@ const routes = createBrowserRouter([
 
         {
           path:"/stockdetails",
-          element: <StockCard />
+          element: <StockCard />,
+        },
+        {
+          path: "/stockmetrics",
+          element: <Metrics/>
         }
-
-
       ]
     }]);
 

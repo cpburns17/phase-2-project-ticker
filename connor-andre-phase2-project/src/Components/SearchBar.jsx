@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import App from "./App"
-import SearchResults from "./SearchResults";
 import { useOutletContext, useNavigate } from "react-router-dom";
 
 function SearchBar () {

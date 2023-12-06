@@ -2,13 +2,11 @@ import React, {useState, useEffect} from "react"
 import App from "./App"
 import "./index.css"
 
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 function StockCard ({stocks}) {
 
     const {state} = useLocation()
-
-    console.log(state)
 
     const [frontCard, setFrontCard] = useState(true)
     const [welcomePage, setWelcomePage] = useState(state ? false : true)
@@ -122,6 +120,19 @@ function StockCard ({stocks}) {
         }
     }
 
+    const navigate = useNavigate() 
+
+    function handleMetrics () {
+        const stockMetrics = {
+            name : stockData.name,
+            ticker : stockData.ticker,
+            price : price,
+            image : image,
+            home_page_url : stockData.homepage_url,
+            market_cap: stockData.market_cap
+        }
+        navigate('/stockmetrics', {state: stockMetrics})
+    }
 
 return (
     <div>  
@@ -161,7 +172,7 @@ return (
             <p>Volume: ${numberWithCommas(volume)} {(stockData.currency_name)}</p>
             <p>Market Cap: {numberWithCommas(stockData.market_cap)}</p>
             <p>Description: {stockData.description}</p>
-            <button>See Company's Metrics</button>    
+            <button onClick={() => handleMetrics(stockData)}>See Company's Metrics</button>    
         </div>       
     </div> )}
 
