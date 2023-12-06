@@ -1,22 +1,34 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import App from './App'
+import StockCard from "./StockCard"
+import Stock from "./Stock"
+import { useOutletContext } from "react-router-dom"
+
 // import {useParams} from "react-router-dom"
 
-function SavedStocks (){
+function SavedStocks ({renderDelete}){
     // const paramsc= useParams();
+    const [savedStocks, setSavedStocks] = useState([])
+
+
+
+
+useEffect(() => {
+    fetch('http://localhost:3000/stocks')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        setSavedStocks(data)
+    })
+}, [])
 
 return (
     <div className="saved-list">
-        <h1>Your Matches</h1>
-        <div className="front-card">
-            <img alt="card-front" src={""}/>
-            <div className="stock-info">
-                {/* <h2>Company Name</h2>
-                <h2>Ticker</h2>
-                <p>Price</p> */}
-            </div>
-            <button>Remove</button>
-        </div> 
+        <h1 
+        className= "matches"> {savedStocks.map(stock => <Stock stock={stock} renderDelete={renderDelete} />)} 
+        </h1>
+            
+        
     </div>
 )
 }
