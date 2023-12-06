@@ -6,12 +6,9 @@ import { useLocation } from "react-router-dom"
 
 function StockCard ({stocks}) {
 
-
     const {state} = useLocation()
 
     console.log(state)
-
-
 
     const [frontCard, setFrontCard] = useState(true)
     const [welcomePage, setWelcomePage] = useState(state ? false : true)
@@ -19,6 +16,7 @@ function StockCard ({stocks}) {
     const [image, setImage] = useState('https://static.dezeen.com/uploads/2017/08/tinder-redesign-graphics_dezeen_sq-1.jpg')
     const [price, setPrice] = useState('')
     const [volume, setVolume] = useState('')
+    const [sic, setSic] = useState('')
 
 
 
@@ -34,6 +32,7 @@ function StockCard ({stocks}) {
     .then(data => {
         console.log(data)
         setImage(data.results.branding.logo_url)
+        setSic(data.results.sic_description)
         setStockData(data.results)
     })
 
@@ -50,18 +49,6 @@ function StockCard ({stocks}) {
     }
 
     
-
-    // if(!state && stockData){
-    //     useEffect(() => {
-    //         fetch(`https://api.polygon.io/v1/open-close/${stockData.ticker}/2023-12-04?adjusted=true&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
-    //         .then(res=> res.json())
-    //         .then(data => {
-    //             console.log(data)
-    //             setPrice(data)
-    //         }) 
-    //     }, [])
-    // }
-    // else{
         if(state){
         useEffect(() => {
 
@@ -70,22 +57,20 @@ function StockCard ({stocks}) {
             .then(res=> res.json())
             .then(data => {
                 console.log(data)
-                setPrice(data)
+                setPrice(data.close)
+                setVolume(data.volume)
             }) 
 
             fetch(`https://api.polygon.io/v3/reference/tickers/${state.ticker}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
             .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        setImage(data.results.branding.logo_url)
-        setStockData(data.results)
-    })
+            .then(data => {
+            console.log(data)
+            setImage(data.results.branding.logo_url)
+            setStockData(data.results)
+            setSic(data.results.sic_description)
+            })
         }, [])}
-    // }
 
-     
-
-    
 
     function renderWelcome () {
         setWelcomePage(!welcomePage)
@@ -106,7 +91,8 @@ function StockCard ({stocks}) {
             volume : volume,
             image : image,
             home_page_url : stockData.homepage_url,
-            market_cap: stockData.market_cap
+            market_cap: stockData.market_cap,
+            sic_description: sic
         }
 
         fetch('http://localhost:3000/stocks',{
@@ -121,6 +107,19 @@ function StockCard ({stocks}) {
             console.log(data)
         })
         randomStock()
+    }
+
+    function numberWithCommas(x) {
+        Math.ceil(x * 100) / 100
+        if(x/1000 < 1000){
+            return `${Math.ceil(((x/1000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))*1000)/1000}k`
+        } else if(x/1000000 < 1000){
+            return `${Math.ceil(((x/1000000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))*1000)/1000}m`
+        } else if (x/1000000000 < 1000) {
+            return `${Math.ceil(((x/1000000000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))*1000)/1000}b`  
+        } else if (x/1000000000000 < 1000){
+            return `${Math.ceil(((x/1000000000000).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","))*1000)/1000}t`
+        }
     }
 
 
@@ -149,8 +148,8 @@ return (
         <div className="stock-info">
             <h2>{stockData.name}</h2>
             <h2>{stockData.ticker}</h2>
+            <h2>{sic}</h2>
             <h2>Price: ${price} {stockData.currency_name}</h2>
-            <p>Description {stockData.description}</p>
         </div>
     </div> ) 
         
@@ -159,9 +158,10 @@ return (
     <div className="stock-pic">
         <img alt="card-back" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
         <div className="stock-info">
-            <p>Volume: {volume}</p>
-            <p>TradeHistory</p>
-            <p>CompanyInfo</p>    
+            <p>Volume: ${numberWithCommas(volume)} {(stockData.currency_name)}</p>
+            <p>Market Cap: {numberWithCommas(stockData.market_cap)}</p>
+            <p>Description: {stockData.description}</p>
+            <button>See Company's Metrics</button>    
         </div>       
     </div> )}
 

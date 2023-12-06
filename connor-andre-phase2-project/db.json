@@ -9,26 +9,6 @@
       "home_page_url": "https://www.bip.brookfield.com",
       "market_cap": 12468306008.380001,
       "id": 1
-    },
-    {
-      "name": "Brookfield Infrastructure Partners L.P. Limited Partnership Units",
-      "ticker": "BIP",
-      "price": 27.32,
-      "volume": 617979,
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmJpcC5icm9va2ZpZWxkLmNvbQ/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.bip.brookfield.com",
-      "market_cap": 12468306008.380001,
-      "id": 2
-    },
-    {
-      "name": "STAG INDUSTRIAL, INC.",
-      "ticker": "STAG",
-      "price": 27.32,
-      "volume": 617979,
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnN0YWdpbmR1c3RyaWFsLmNvbQ/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.stagindustrial.com",
-      "market_cap": 6552893853.18,
-      "id": 3
     }
   ]
 }
