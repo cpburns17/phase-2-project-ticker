@@ -141,6 +141,18 @@
       "market_cap": 67904573.0908,
       "sic_description": "FINANCE SERVICES",
       "id": 30
+    },
+    {
+      "name": "Lemonade, Inc.",
+      "ticker": "LMND",
+      "price": 18.96,
+      "volume": 1904614,
+      "description": "Lemonade Inc operates in the insurance industry. The company offers digital and artificial intelligence based platform for various insurances and for settling claims and paying premiums. The platform ensures transparency in issuing policies and settling disputes. Geographically, it operates in California, Texas, New York, New Jersey, Illinois, Georgia, Washington, Colorado, Pennsylvania, Virginia and others.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmxlbW9uYWRlLmNvbQ/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.lemonade.com",
+      "market_cap": 1218767807.67,
+      "sic_description": "FIRE, MARINE & CASUALTY INSURANCE",
+      "id": 31
     }
   ]
 }

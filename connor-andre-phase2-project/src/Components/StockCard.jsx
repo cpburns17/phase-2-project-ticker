@@ -10,10 +10,6 @@ import { FaRegBuilding } from "react-icons/fa";
 import { AiOutlineStock } from "react-icons/ai";
 import { TiBusinessCard } from "react-icons/ti";
 
-
-
-
-
 import { useOutletContext } from "react-router-dom";
 
 
@@ -207,6 +203,7 @@ return (
                 <button className="like-button" onClick={handleLike} > <GoHeartFill className="like"/> </button>
         </div>
 </div> 
+
 )
 }
 
