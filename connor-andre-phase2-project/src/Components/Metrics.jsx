@@ -1,5 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
+import { Line } from 'react-chartjs-2';
+import 'chart.js/auto'
+import Graph from "./Graph";
 
 function Metrics(){
 
@@ -14,6 +17,9 @@ function Metrics(){
         month: '',
         year: ''
     })
+
+    const [financials, setFinancials] = useState([])
+    const [graphData, setGraphData] = useState([])
 
     const {state} = useLocation()
     const id = {
@@ -33,58 +39,40 @@ function Metrics(){
         }
     }
 
-    function getDates() {
-    const today = new Date();
-    const yearToday = today.getFullYear();
-    const monthToday = String(today.getMonth() + 1).padStart(2, '0');
-    const dayToday = String(today.getDate()).padStart(2, '0');
-
-    const formattedToday = `${yearToday}-${monthToday}-${dayToday}`;
-
-    const date7DaysAgo = new Date(today);
-    date7DaysAgo.setDate(today.getDate() - 6);
-    const year7DaysAgo = date7DaysAgo.getFullYear();
-    const month7DaysAgo = String(date7DaysAgo.getMonth() + 1).padStart(2, '0');
-    const day7DaysAgo = String(date7DaysAgo.getDate()).padStart(2, '0');
-
-    const formatted7DaysAgo = `${year7DaysAgo}-${month7DaysAgo}-${day7DaysAgo}`;
-
-    return { today: formattedToday, lastWeek: formatted7DaysAgo, year: yearToday, lastyear: yearToday-1};
-}
-
-if(state){
-    fetch(`https://api.polygon.io/v2/aggs/ticker/${state.ticker}/range/1/day/${getDates().lastWeek}/${getDates().today}?adjusted=true&sort=asc&limit=120&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
+useEffect(()=>{
+    fetch(`https://api.polygon.io/vX/reference/financials?ticker=${state.ticker}&timeframe=annual&limit=2&sort=period_of_report_date&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
     .then((res)=>res.json())
     .then((data)=>{
-        console.log(data.results)
+        setFinancials(data.results)
     })
-}
+},[state])
 
-return (
-    <div>
-    <h1 onClick={handleName}>{state.name}</h1>
-    <button onClick={goBack}>Go back</button>
-    </div>
-)
-    
 
     function handleSelectDates(x) {
         if(x === 'days') {
             const n = 31;
             const options = [];
             for(let i = 1; i <= n; i++) {
-                options.push(<option key={i}>{i}</option>);
+                if(i<10){
+                    options.push(<option value={`0${i}`} key={i}>0{i}</option>);
+                } else {
+                    options.push(<option value={i} key={i}>{i}</option>);
+                }
             }
             return options
         } else if (x==='months') {
             const n =12
             const options = [];
             for(let i = 1; i <= n; i++) {
-                options.push(<option key={i}>{i}</option>);
+                if(i<10){
+                    options.push(<option value={`0${i}`} key={i}>0{i}</option>);
+                } else {
+                    options.push(<option value={i} key={i}>{i}</option>)
+                }
             }
             return options
         } else if(x==='years') {
-            const n= getDates().year
+            const n= (new Date().getFullYear())
             const options = []
             for(let i = 2018; i <= n; i++) {
                 options.push(<option key={i}>{i}</option>);
@@ -105,6 +93,29 @@ return (
         })
     }
 
+    function handleGraph(){
+            fetch(`https://api.polygon.io/v2/aggs/ticker/${state.ticker}/range/1/day/${startDate.year}-${startDate.month}-${startDate.day}/${endDate.year}-${endDate.month}-${endDate.day}?adjusted=true&sort=asc&limit=120&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
+            .then((res)=>res.json())
+            .then((data)=>{
+                setGraphData(data.results)
+            })
+
+            
+        }
+
+        
+        const dataSet = graphData.map(closePrice=>{
+            return closePrice.c
+        })
+
+        const timeAdapter = graphData.map((data)=>{
+            const timeStamp = new Date(data.t)
+            const formattedTime = `${timeStamp.getFullYear()}-${(timeStamp.getMonth()+1).toString().padStart(2, '0')}-${timeStamp.getDate().toString().padStart(2, '0')}`
+            return formattedTime
+        })
+        
+        console.log(timeAdapter)
+
     return (
         <div>
         <h1 onClick={handleName}>{state.name}</h1>
@@ -112,28 +123,39 @@ return (
             
         <p>Select Start Date</p>
         <select onChange={handleOnChangeStart} value={startDate.day} name="day">
+            <option value="" disabled selected hidden>DD</option>
             {handleSelectDates('days')}
         </select>
         <select onChange={handleOnChangeStart} value={startDate.month} name='month'>
+            <option value="" disabled selected hidden>MM</option>
             {handleSelectDates('months')} 
         </select>
         <select onChange={handleOnChangeStart} value={startDate.year} name='year'>
+            <option value="" disabled selected hidden>YYYY</option>
             {handleSelectDates('years')}
         </select>
         <div>
         <p>Select End Date</p>
         <select onChange={handleOnChangeEnd} value={endDate.day} name="day">
+            <option value="" disabled selected hidden>DD</option>
             {handleSelectDates('days')}
         </select>
         <select onChange={handleOnChangeEnd} value={endDate.month} name='month'>
+            <option value="" disabled selected hidden>MM</option>
             {handleSelectDates('months')} 
         </select>
         <select onChange={handleOnChangeEnd} value={endDate.year} name='year'>
+            <option value="" disabled selected hidden>YYYY</option>
             {handleSelectDates('years')}
         </select>
         </div>
+        <div>
+            <button onClick={handleGraph}>Create Graph</button>
         </div>
-
+        <div>
+            <Graph timeAdapter={timeAdapter} dataSet={dataSet}/>
+        </div>
+        </div>
         <button onClick={goBack}>Go back</button>
         </div>
     )
