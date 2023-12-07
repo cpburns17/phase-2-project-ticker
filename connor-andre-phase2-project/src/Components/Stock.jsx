@@ -26,6 +26,7 @@ function Stock ({stock, renderDelete}) {
         <img className="saved-pic" alt="card-front" src={`${stock.image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
         <div className="saved-details">
             <h3 className="stock-name">{stock.name} ({stock.ticker})</h3>
+            <h3 className="stock-sic">{stock.sic}</h3>
             <h3 className="stock-price">Price: ${stock.price} </h3>
             <button className="remove-stock"onClick={() => handleDelete(stock)}>Remove from list </button>
         </div>

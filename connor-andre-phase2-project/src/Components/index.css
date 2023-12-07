@@ -154,7 +154,8 @@ svg:active {
 }
 
 .stock-sic {
-
+font-size: medium;
+font-weight: 200;
 }
 
 .stock-price {

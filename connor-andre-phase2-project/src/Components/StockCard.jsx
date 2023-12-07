@@ -40,6 +40,7 @@ function StockCard ({stocks}) {
         console.log(data)
         setImage(data.results.branding.logo_url)
         setStockData(data.results)
+        setSic(data.results.sic_description)
 
         fetch(`https://api.polygon.io/v1/open-close/${data.results.ticker}/2023-12-04?adjusted=true&apiKey=15QmMowx5gfJE_p1AL_gGzjGQm9kfYtr`)
         .then(res=> res.json())
@@ -138,7 +139,8 @@ function StockCard ({stocks}) {
             price : price,
             image : image,
             home_page_url : stockData.homepage_url,
-            market_cap: stockData.market_cap
+            market_cap: stockData.market_cap,
+            sic_description: sic
         }
         navigate('/stockmetrics', {state: stockMetrics})
     }
