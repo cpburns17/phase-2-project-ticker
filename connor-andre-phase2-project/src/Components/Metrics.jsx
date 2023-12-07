@@ -1,6 +1,19 @@
+import { useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
 function Metrics(){
+
+    const [startDate, setStartDate] = useState({
+        day: '',
+        month: '',
+        year: ''
+    })
+
+    const [endDate, setEndDate] = useState({
+        day: '',
+        month: '',
+        year: ''
+    })
 
     const {state} = useLocation()
     const id = {
@@ -19,7 +32,6 @@ function Metrics(){
             window.open(state.home_page_url, '_blank');
         }
     }
-
 
     function getDates() {
         const today = new Date();
@@ -48,9 +60,74 @@ function Metrics(){
         })
     }
 
+    
+
+    function handleSelectDates(x) {
+        if(x === 'days') {
+            const n = 31;
+            const options = [];
+            for(let i = 1; i <= n; i++) {
+                options.push(<option key={i}>{i}</option>);
+            }
+            return options
+        } else if (x==='months') {
+            const n =12
+            const options = [];
+            for(let i = 1; i <= n; i++) {
+                options.push(<option key={i}>{i}</option>);
+            }
+            return options
+        } else if(x==='years') {
+            const n= getDates().year
+            const options = []
+            for(let i = 2018; i <= n; i++) {
+                options.push(<option key={i}>{i}</option>);
+            }
+            return options;
+    }  
+    }
+
+    function handleOnChangeStart(e){
+        setStartDate({...startDate,
+            [e.target.name] : e.target.value
+        })
+    }
+
+    function handleOnChangeEnd(e){
+        setEndDate({...endDate,
+            [e.target.name] : e.target.value
+        })
+    }
+
     return (
         <div>
         <h1 onClick={handleName}>{state.name}</h1>
+        <div>
+            
+        <p>Select Start Date</p>
+        <select onChange={handleOnChangeStart} value={startDate.day} name="day">
+            {handleSelectDates('days')}
+        </select>
+        <select onChange={handleOnChangeStart} value={startDate.month} name='month'>
+            {handleSelectDates('months')} 
+        </select>
+        <select onChange={handleOnChangeStart} value={startDate.year} name='year'>
+            {handleSelectDates('years')}
+        </select>
+        <div>
+        <p>Select End Date</p>
+        <select onChange={handleOnChangeEnd} value={endDate.day} name="day">
+            {handleSelectDates('days')}
+        </select>
+        <select onChange={handleOnChangeEnd} value={endDate.month} name='month'>
+            {handleSelectDates('months')} 
+        </select>
+        <select onChange={handleOnChangeEnd} value={endDate.year} name='year'>
+            {handleSelectDates('years')}
+        </select>
+        </div>
+        </div>
+
         <button onClick={goBack}>Go back</button>
         </div>
     )
