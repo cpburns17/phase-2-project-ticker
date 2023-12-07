@@ -10,7 +10,7 @@ nav {
   height: 44px;
   font-size: 1.5rem;
   background-color: white;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 svg {
@@ -29,37 +29,70 @@ svg:active {
 
 /* SavedStocks */
 
-.saved-list {
-  width: 100%;
-}
 
 .matches {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .main-pic {
-  padding: 3%;
+  width: 100%;
+}
+
+.saved-stock {
+  align-items: center;
+  padding: 5%;
   margin: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: #efefef solid;
+  border: rgb(198, 42, 7)solid;
   box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
-  border-width: thick;
+  border-width: thin;
   border-radius: 20px;
 }
 
-.pic {
-  /* width: 75%;
-  height: 75%; */
+.saved-pic {
   border: none;
+  display: flex;
+
 }
 
 .saved-details {
+  text-align: center;
+  align-items: center;
   font-size: medium;
-  width: 318px;
-  /* height: 75%; */
+  padding: 2%;
+}
+
+
+.remove-stock {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: rgb(198, 42, 7);
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0px;
+  min-height: 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
 }
 
 
@@ -86,35 +119,64 @@ svg:active {
 
 
 
-
-
-
-
 /* StockCard */
 
 
 .stock-pic {
-  padding: 3%;
-  width: 30%;
-  margin: 2%;
+  padding: 5%;
+  margin: 5%; 
+  /* width: 30%;
+  margin: 2%; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: #efefef solid;
-  box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
-  border-width: thick;
+  border: rgb(198, 42, 7)solid;
+  box-shadow: 0 2px 6px 0 rgba(205, 33, 17, 0.14);
+  border-width: thin;
   border-radius: 20px;
 }
+
+/* Stock details */
 
 .stock-details {
   max-width: 80%;
   margin: 10%;
-  height: calc(100% - 44px);
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+/*Front Card */
+.stock-name {
+
+}
+
+.stock-sic {
+
+}
+
+.stock-price {
+  font-size: x-large;
+}
+
+/*Back Card */
+
+.stock-volume {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.stock-cap {
+  font-size: large;
+  margin-top: 0%;
+}
+
+.stock-description{ 
+margin-bottom: 20%;
+}
+
 
 h2 {
   width: 100%;
@@ -125,7 +187,7 @@ h2 {
 }
 
 img {
-  width: 30vw;
+  width: 75%;
   height: 30vh;
   padding: 3%;
   background: url('../images/profile.jpg') center center / cover;
@@ -148,22 +210,33 @@ img {
 }
 
 .stock-welcome {
-  padding: 2%;
-  margin: 2%;
+  padding: 5%;
+  margin: 5%; 
+  /* width: 30%;
+  margin: 2%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   border: #efefef solid;
+  box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
+  border-width: thick;
   border-radius: 20px;
 }
 .stock-welcome-info {
   margin-bottom: 5%;
+  text-align: center;
   width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: x-large;
+}
+
+.instructions {
+  font-size: small;
+  margin-bottom: 10%;
+  margin-top: 0%;
 }
 
 .welcome-button {
@@ -204,9 +277,9 @@ img {
   flex: auto;
   justify-content: space-evenly;
   align-items: center;
-  margin-inline: 1px;
+  margin-inline: 10px;
   margin-left: -3%;
-  margin-top: -5%;
+  margin-top: -20%;
  
 }
 
@@ -239,7 +312,7 @@ img {
 .button-4 {
   align-items: center;
   background-clip: padding-box;
-  background-color: rgb(231, 13, 96);
+  background-color: rgb(198, 42, 7);
   border: 1px solid transparent;
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;

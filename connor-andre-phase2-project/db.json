@@ -1,16 +1,6 @@
 {
   "stocks": [
     {
-      "name": "McEwen Mining Inc.",
-      "ticker": "MUX",
-      "price": 30.4,
-      "volume": 1305538,
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lm1jZXdlbm1pbmluZy5jb20/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.mcewenmining.com",
-      "market_cap": 359988367.02,
-      "id": 5
-    },
-    {
       "name": "Fortune Brands Innovations, Inc.",
       "ticker": "FBIN",
       "price": 121.97,

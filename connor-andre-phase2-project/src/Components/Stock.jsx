@@ -23,23 +23,23 @@ function Stock ({stock, renderDelete}) {
         <div className="main-pic">
             {frontCard ? (
     <div className="saved-stock">
-        <img className="pic" alt="card-front" src={`${stock.image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
+        <img className="saved-pic" alt="card-front" src={`${stock.image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
         <div className="saved-details">
-            <h3>{stock.name} ({stock.ticker})</h3>
-            <h3>Price: ${stock.price} </h3>
-            <button onClick={() => handleDelete(stock)}>Remove from list </button>
+            <h3 className="stock-name">{stock.name} ({stock.ticker})</h3>
+            <h3 className="stock-price">Price: ${stock.price} </h3>
+            <button className="remove-stock"onClick={() => handleDelete(stock)}>Remove from list </button>
         </div>
     </div> ) 
         
     : (
 
     <div className="saved-stock">
-        <img className="pic" alt="card-back" src={`${stock.image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
+        <img className="saved-pic" alt="card-back" src={`${stock.image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
         <div className="saved-details">
-            <h3>Volume: {stock.volume}</h3>
+            <h3 className="stock-volume">Volume: ${stock.volume}</h3>
             <p>TradeHistory: {stock.market_cap}</p>
             <p>{stock.home_page_url}</p>
-            <p>Company Bio: {stock.description}</p>  
+            <p >About me: {stock.description}</p>  
         </div>       
     </div> )}
         </div>

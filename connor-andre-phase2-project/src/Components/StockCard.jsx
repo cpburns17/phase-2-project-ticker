@@ -151,7 +151,7 @@ return (
             <div className="stock-welcome-info">
                 <h4>Welcome to Ticker!</h4>
                 <h4>The #1 Stock Matchmaker</h4>
-                <p>Instructions:
+                <p className="instructions">Instructions:
                     Everytime you click - you'll be matched with a new, random stock. Click on the stock picture to see detailed information about the stocks trade history, trade volume, and company information. If you want to invest in this stock, click the likes button to add it to your "Matches" list. 
                     Looking for a specific stock in particular? Use the "Search" bar to search by the company's ticker symbol.
                     
@@ -167,8 +167,8 @@ return (
                 <img alt="card-front" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
                 <div className="stock-details">
                     <h2 className="stock-name">{stockData.name} ({stockData.ticker})</h2>
-                    <h2>{sic}</h2>
-                    <h2>Price: ${price} {stockData.currency_name}</h2>
+                    <h2 className="stock-sic">{sic}</h2>
+                    <h2 className="stock-price">Price: ${price} {stockData.currency_name}</h2>
                 </div>
             </div> ) 
                 
@@ -177,9 +177,9 @@ return (
             <div className="stock-pic">
                 <img alt="card-back" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
                 <div className="stock-details">
-                    <p>Volume: ${numberWithCommas(volume)} {(stockData.currency_name)}</p>
-                    <p>Market Cap: {numberWithCommas(stockData.market_cap)}</p>
-                    <p>Description: {stockData.description}</p>
+                    <p className="stock-volume">Volume: ${numberWithCommas(volume)}</p>
+                    <p className="stock-cap">Market Cap: ${numberWithCommas(stockData.market_cap)}</p>
+                    <p classsName="stock-description">About me: {stockData.description}</p>
                     <button className="button-4" onClick={() => handleMetrics(stockData)}>See Company's Metrics</button>  
                 </div>       
             </div> )}
