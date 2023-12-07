@@ -5,12 +5,12 @@ html {
 nav {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;  
-  padding: 10px 0;
-  height: 44px;
+  justify-content: space-around;  
+  padding: 2% 0;
   font-size: 1.5rem;
   background-color: white;
-  margin-bottom: 5px;
+  margin-top: 5%;
+  margin-bottom: -5%;
 }
 
 svg {
