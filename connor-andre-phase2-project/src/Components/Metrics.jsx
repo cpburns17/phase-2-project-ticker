@@ -46,8 +46,26 @@ function Metrics(){
     const year7DaysAgo = date7DaysAgo.getFullYear();
     const month7DaysAgo = String(date7DaysAgo.getMonth() + 1).padStart(2, '0');
     const day7DaysAgo = String(date7DaysAgo.getDate()).padStart(2, '0');
-    }
 
+    const formatted7DaysAgo = `${year7DaysAgo}-${month7DaysAgo}-${day7DaysAgo}`;
+
+    return { today: formattedToday, lastWeek: formatted7DaysAgo, year: yearToday, lastyear: yearToday-1};
+}
+
+if(state){
+    fetch(`https://api.polygon.io/v2/aggs/ticker/${state.ticker}/range/1/day/${getDates().lastWeek}/${getDates().today}?adjusted=true&sort=asc&limit=120&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(data.results)
+    })
+}
+
+return (
+    <div>
+    <h1 onClick={handleName}>{state.name}</h1>
+    <button onClick={goBack}>Go back</button>
+    </div>
+)
     
 
     function handleSelectDates(x) {
