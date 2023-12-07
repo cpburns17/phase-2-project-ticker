@@ -193,7 +193,7 @@ return (
                 <div className="stock-details">
                     <p className="stock-volume">Volume: ${numberWithCommas(volume)}</p>
                     <p className="stock-cap">Market Cap: ${numberWithCommas(stockData.market_cap)}</p>
-                    <p classsName="stock-description">About me: {stockData.description}</p>
+                    <p className="stock-bio">About me: {stockData.description}</p>
                     <button className="button-4" onClick={() => handleMetrics(stockData)}>See Company Metrics</button>  
                 </div>       
             </div> )}

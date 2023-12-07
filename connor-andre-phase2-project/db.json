@@ -153,6 +153,53 @@
       "market_cap": 1218767807.67,
       "sic_description": "FIRE, MARINE & CASUALTY INSURANCE",
       "id": 31
+    },
+    {
+      "name": "Lindsay Corporation",
+      "ticker": "LNN",
+      "price": 121.97,
+      "volume": 75444,
+      "description": "Lindsay Corp provides various proprietary water management and road infrastructure products and services. It has operations categorized into two main reporting segments: Irrigation, and Infrastructure. The company generates maximum revenue from the Irrigation segment. Its Irrigation segment includes manufacturing and marketing center pivot, lateral move, and hose reel irrigation systems, as well as various technology solutions such as GPS positioning and guidance, variable rate irrigation, wireless irrigation management, M2M communication technology, and smartphone applications. Geographically, it derives a majority of its revenue from the United States.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmxpbmRzYXkuY29t/images/2023-05-01_logo.png",
+      "home_page_url": "https://www.lindsay.com",
+      "market_cap": 1319189636.24,
+      "sic_description": "FARM MACHINERY & EQUIPMENT",
+      "id": 32
+    },
+    {
+      "name": "DuPont de Nemours, Inc. Common Stock",
+      "ticker": "DD",
+      "price": 71.76,
+      "volume": 4455280,
+      "description": "DuPont is a diversified global specialty chemicals company created in 2019 as a result of the DowDuPont merger and subsequent separations. Its portfolio includes specialty chemicals and downstream products that serve the electronics and communication, automotive, construction, safety and protection, and water management industries. DuPont benefits from the ability to produce patented specialty chemicals that command pricing power. Noteworthy products include Kevlar, Tyvek, and Nomex, which have evolved over time to enable a wide range of applications across multiple industries.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmR1cG9udC5jb20/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.dupont.com",
+      "market_cap": 30412605034.239998,
+      "sic_description": "PLASTIC MATERIALS, SYNTH RESINS & NONVULCAN ELASTOMERS",
+      "id": 33
+    },
+    {
+      "name": "TC Energy Corporation",
+      "ticker": "TRP",
+      "price": 38.13,
+      "volume": 3248991,
+      "description": "TC Energy operates natural gas, oil, and power generation assets in Canada and the United States. The firm operates more than 60,000 miles of oil and gas pipelines, more than 650 billion cubic feet of natural gas storage, and about 4,300 megawatts of electric power.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnRjZW5lcmd5LmNvbQ/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.tcenergy.com",
+      "market_cap": 39468220000,
+      "id": 34
+    },
+    {
+      "name": "Boyd Gaming Corporation",
+      "ticker": "BYD",
+      "price": 60.37,
+      "volume": 847020,
+      "description": "Boyd Gaming Corp is a multi-jurisdictional gaming company. The company operates wholly owned gaming entertainment properties (casino space, slot machines, table games, and hotel rooms) in Nevada, Illinois, Indiana, Iowa, Kansas, Louisiana, Mississippi, Missouri, Ohio, and Pennsylvania. Its business segments are separated by geographical regions: Las Vegas Locals; Downtown Las Vegas; and Midwest and South. Midwest and South holds the largest number of entertainment properties, and it generates most sales for the company. Boyd generates most of its revenue from its gaming operations.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmJveWRnYW1pbmcuY29t/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.boydgaming.com",
+      "market_cap": 5776801120.690001,
+      "sic_description": "HOTELS & MOTELS",
+      "id": 35
     }
   ]
 }
