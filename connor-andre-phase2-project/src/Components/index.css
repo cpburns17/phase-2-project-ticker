@@ -118,7 +118,6 @@ svg:active {
 }
 
 
-
 /* StockCard */
 
 
@@ -149,6 +148,7 @@ svg:active {
 }
 
 /*Front Card */
+
 .stock-name {
 
 }
@@ -210,6 +210,14 @@ img {
   justify-content: center;
 }
 
+/* Welcome Page */
+
+.welcome-line2 {
+  margin-top: 0%;
+  margin-bottom: 10%;
+  font-family:'Times New Roman', Times, serif;
+}
+
 .stock-welcome {
   padding: 5%;
   margin: 5%; 
@@ -238,6 +246,7 @@ img {
   font-size: small;
   margin-bottom: 10%;
   margin-top: 0%;
+  font-family:sans-serif;
 }
 
 .welcome-button {

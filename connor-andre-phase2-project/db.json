@@ -1,72 +1,6 @@
 {
   "stocks": [
     {
-      "name": "Fortune Brands Innovations, Inc.",
-      "ticker": "FBIN",
-      "price": 121.97,
-      "volume": 75444,
-      "description": "Fortune Brands Innovations is a leading home and security products company that operates two segments. The company's $2.6 billion plumbing segment, led by the Moen brand, sells faucets, showers, and other plumbing fixtures, and the $2.2 billion outdoors and security segment sells entry doors under the Therma-Tru brand name, Fiberon-branded patio decking, and locks and other security devices under the Master Lock and SentrySafe brand names.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmZiaW4uY29t/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.fbin.com",
-      "market_cap": 9217289605.374,
-      "id": 8
-    },
-    {
-      "name": "FREYR Battery",
-      "ticker": "FREY",
-      "price": 29.83,
-      "volume": 4795902,
-      "description": "FREYR Battery is an emerging producer of clean battery solutions for the planet. It designs and manufactures high-density and cost-competitive lithium-ion batteries with a reduced carbon footprint for the markets for electric mobility, stationary energy storage, and marine and aviation applications.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmZyZXlyYmF0dGVyeS5jb20/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.freyrbattery.com",
-      "market_cap": 288491308.21,
-      "id": 9
-    },
-    {
-      "name": "Molina Healthcare, Inc.",
-      "ticker": "MOH",
-      "price": 2.02,
-      "volume": 7192899,
-      "description": "Molina Healthcare Inc offers healthcare plans focused on Medicaid-related solutions for low-income families and individuals. Its health plans are operated by a network of subsidiaries, each of which is licensed as a health maintenance organization (HMO). In addition to its Health Plans segment, Molina has a Medicaid,Medicare, and Marketplace segment that represent the government-funded or sponsored programs under their management information systems. Molina's Medicaid plans receive revenue on a per-member per-month basis from state government agencies, and its Medicare Advantage plans receive revenue from managed care plans that contract with the Centers for Medicaid and Medicare (CMS). Molina also provides plans through health insurance exchanges.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lm1vbGluYWhlYWx0aGNhcmUuY29t/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.molinahealthcare.com",
-      "market_cap": 21090025000,
-      "id": 10
-    },
-    {
-      "name": "Alamo Group, Inc.",
-      "ticker": "ALG",
-      "description": "Alamo Group Inc is engaged in the design and manufacturing of agricultural equipment and infrastructure maintenance equipment. Its products include tractor-mounted mowing and other vegetation maintenance equipment, street sweepers, excavators, vacuum trucks, snow removal equipment, leaf collection equipment, pothole patchers, zero-turn radius mowers, agricultural implements, and related aftermarket parts. The company's reportable segments are Vegetation Management and Industrial Equipment. It generates a majority of its revenue from Vegetation Management. Geographically, the company generates majority of the revenue from the United States.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmFsYW1vLWdyb3VwLmNvbQ/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.alamo-group.com",
-      "market_cap": 2248965756.63,
-      "id": 11
-    },
-    {
-      "name": "CHEGG, INC.",
-      "ticker": "CHGG",
-      "price": 10.27,
-      "volume": 1775040,
-      "description": "Chegg Inc is an American educational services company. The Chegg platform provides products and services to support learners with their academic course materials, as well as their career and personal skills development. The company's service and product offerings fall into two categories: Subscription Services, which encompasses Chegg Study Pack, Chegg Study, Chegg Writing, Chegg Math, and Busuu offerings that can be accessed internationally through the company's websites and on mobile devices, and Skills and Other, which encompasses skills, advertising services, print textbooks and eTextbooks offerings.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmNoZWdnLmNvbQ/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.chegg.com",
-      "market_cap": 1205054367.46,
-      "sic_description": "SERVICES-EDUCATIONAL SERVICES",
-      "id": 12
-    },
-    {
-      "name": "Flotek Industries, Inc.",
-      "ticker": "FTK",
-      "price": 3.18,
-      "volume": 166427,
-      "description": "Flotek Industries Inc delivers chemistry-based technology solutions for energy, industrial, and consumer applications. It develops and supplies chemistry and services to the oil and gas industries, and high-value compounds to companies that make food and beverages, cleaning products, cosmetics, and others. The company operates in the Chemistry Technologies segment which designs, develops, manufactures, packages, and markets chemistries that market specialty chemicals. Its Data Analytics segment enables users to maximize the value of their hydrocarbon-associated processes by providing analytics associated with the streams in seconds rather than minutes or days.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmZsb3Rla2luZC5jb20/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.flotekind.com",
-      "market_cap": 96403966.75,
-      "sic_description": "",
-      "id": 13
-    },
-    {
       "name": "Kilroy Realty Corp.",
       "ticker": "KRC",
       "price": 35.99,
@@ -79,16 +13,40 @@
       "id": 14
     },
     {
-      "name": "DuPont de Nemours, Inc. Common Stock",
-      "ticker": "DD",
-      "price": 71.76,
-      "volume": 4455280,
-      "description": "DuPont is a diversified global specialty chemicals company created in 2019 as a result of the DowDuPont merger and subsequent separations. Its portfolio includes specialty chemicals and downstream products that serve the electronics and communication, automotive, construction, safety and protection, and water management industries. DuPont benefits from the ability to produce patented specialty chemicals that command pricing power. Noteworthy products include Kevlar, Tyvek, and Nomex, which have evolved over time to enable a wide range of applications across multiple industries.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmR1cG9udC5jb20/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.dupont.com",
-      "market_cap": 30373901209.96,
-      "sic_description": "PLASTIC MATERIALS, SYNTH RESINS & NONVULCAN ELASTOMERS",
+      "name": "The Western Union Company",
+      "ticker": "WU",
+      "price": 11.64,
+      "volume": 4961869,
+      "description": "Western Union provides domestic and international money transfers through its global network of about 600,000 outside agents. The company handled over 270 million transactions in 2022 and is the largest money transfer company in the world.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lndlc3Rlcm51bmlvbi5jb20/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.westernunion.com",
+      "market_cap": 4344981170.400001,
+      "sic_description": "SERVICES-BUSINESS SERVICES, NEC",
       "id": 15
+    },
+    {
+      "name": "Spire Inc.",
+      "ticker": "SR",
+      "price": 62.57,
+      "volume": 457279,
+      "description": "Spire Inc is a public utility holding company with three reportable business segments: Gas Utility , Gas Marketing and Midstream. The Gas Utility segment includes the regulated operations of Laclede Gas, Alabama Gas Corporation (Alagasco), and EnergySouth Inc. The Utilities businesses operations include the purchase, retail, distribution, and sale of natural gas in Missouri, Alabama, and Mississippi. The Gas Utility segment generates a majority of the company's revenue but is subject to seasonal fluctuations. The Gas Marketing segment includes Laclede Energy Resources, Inc, whose operations include the marketing of natural gas and related activities on a non-regulated basis and the Midstream segment includes transportation and storage of natural gas.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnNwaXJlZW5lcmd5LmNvbQ/images/2023-11-22_logo.svg",
+      "home_page_url": "https://www.spireenergy.com",
+      "market_cap": 3381781139.7999997,
+      "sic_description": "NATURAL GAS DISTRIBUTION",
+      "id": 17
+    },
+    {
+      "name": "Centene Corporation",
+      "ticker": "CNC",
+      "price": 74.03,
+      "volume": 2348672,
+      "description": "Centene is a managed-care organization focused on government-sponsored healthcare plans, including Medicaid, Medicare, and the individual exchanges. Centene served 24 million medical members as of June 2023, mostly in Medicaid (67% of membership), the individual exchanges (14%), and Medicare Advantage (6%) plans. The company also serves traditional Medicare users with its Medicare Part D pharmaceutical program.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmNlbnRlbmUuY29t/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.centene.com",
+      "market_cap": 39490808925,
+      "sic_description": "HOSPITAL & MEDICAL SERVICE PLANS",
+      "id": 18
     }
   ]
 }

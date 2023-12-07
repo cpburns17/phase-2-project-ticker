@@ -11,9 +11,6 @@ function Layout () {
     const [errors, setErrors] = useState(null)
     const [search, setSearch] = useState("")
 
-    function renderDelete(deleteStock) {
-        setStocks(stocks.filter((stock) => stock.id != deleteStock.id))
-    }
 
 
     useEffect(() => {
@@ -67,7 +64,7 @@ function Layout () {
     <>
         < Header />
         <div className="main">
-            <Outlet context={{stocks, setStocks, handleSearch, filteredStocks, search, renderDelete}}/>
+            <Outlet context={{stocks, setStocks, handleSearch, filteredStocks, search} }/>
         </div>
         <Footer />
     </>

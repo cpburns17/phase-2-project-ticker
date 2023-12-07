@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+import { useOutletContext } from "react-router-dom"
+
 
 function Stock ({stock, renderDelete}) {
     const [frontCard, setFrontCard] = useState(true)
