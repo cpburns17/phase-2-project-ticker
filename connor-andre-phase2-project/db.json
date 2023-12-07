@@ -1,18 +1,6 @@
 {
   "stocks": [
     {
-      "name": "Kilroy Realty Corp.",
-      "ticker": "KRC",
-      "price": 35.99,
-      "volume": 1074231,
-      "description": "Kilroy Realty is a premier owner and landlord of approximately 16 million square feet of office space across Los Angeles, San Diego, the San Francisco Bay Area, and greater Seattle. The company operates as a real estate investment trust.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmtpbHJveXJlYWx0eS5jb20/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.kilroyrealty.com",
-      "market_cap": 4289795427.2200003,
-      "sic_description": "",
-      "id": 14
-    },
-    {
       "name": "The Western Union Company",
       "ticker": "WU",
       "price": 11.64,
@@ -37,16 +25,110 @@
       "id": 17
     },
     {
-      "name": "Centene Corporation",
-      "ticker": "CNC",
-      "price": 74.03,
-      "volume": 2348672,
-      "description": "Centene is a managed-care organization focused on government-sponsored healthcare plans, including Medicaid, Medicare, and the individual exchanges. Centene served 24 million medical members as of June 2023, mostly in Medicaid (67% of membership), the individual exchanges (14%), and Medicare Advantage (6%) plans. The company also serves traditional Medicare users with its Medicare Part D pharmaceutical program.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmNlbnRlbmUuY29t/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.centene.com",
-      "market_cap": 39490808925,
-      "sic_description": "HOSPITAL & MEDICAL SERVICE PLANS",
-      "id": 18
+      "name": "MURPHY USA INC.",
+      "ticker": "MUSA",
+      "price": 367.52,
+      "volume": 282256,
+      "description": "Murphy USA Inc is an American retailer of gasoline products and convenience-store merchandise operating in the United States. The stores are 100% company-operated and 90% company-owned; most are adjacent to Walmart stores. The business also contains product supply and wholesale assets, such as product distribution terminals and pipelines. Murphy is positioned in the market as a low-price, high-volume fuel retailer selling through low-cost kiosks and small stores. The stores adjacent to Walmart offer a discount program. The amount of the discount offered can vary based on many factors, including state laws.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lm11cnBoeXVzYS5jb20/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.murphyusa.com",
+      "market_cap": 7652496969.460001,
+      "sic_description": "RETAIL-AUTO DEALERS & GASOLINE STATIONS",
+      "id": 21
+    },
+    {
+      "name": "Six Flags Entertainment Corp.",
+      "ticker": "SIX",
+      "price": 24.95,
+      "volume": 1187556,
+      "description": "Six Flags Entertainment Corp owns and operate regional theme parks and water parks. The company operates around 27 theme parks and waterparks, 24 are located in the United States, two are located in Mexico and one is located in Montreal, Canada. The parks generally offer various rides, water attractions, themed areas, concerts, restaurants, game venues, and merchandise outlets.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnNpeGZsYWdzLmNvbQ/images/2023-05-01_logo.png",
+      "home_page_url": "https://www.sixflags.com",
+      "market_cap": 2077565612.7900002,
+      "sic_description": "SERVICES-MISCELLANEOUS AMUSEMENT & RECREATION",
+      "id": 22
+    },
+    {
+      "name": "RTX Corporation",
+      "ticker": "RTX",
+      "price": 83.13,
+      "volume": 5525261,
+      "description": "RTX is a diversified aerospace and defense industrial company formed from the merger of United Technologies and Raytheon, with roughly equal exposure as a supplier to commercial aerospace manufacturers and to the defense market. The company operates in three segments: Collins Aerospace, a diversified aerospace supplier; Pratt & Whitney, an aircraft engine manufacturer; and Raytheon, a defense prime contractor providing a mix of missiles, missile defense systems, sensors, hardware, and communications technology to the military.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnJ0eC5jb20/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.rtx.com",
+      "market_cap": 117864768249.48,
+      "sic_description": "AIRCRAFT ENGINES & ENGINE PARTS",
+      "id": 23
+    },
+    {
+      "name": "HANNON ARMSTRONG SUSTAINABLE INFRASTRUCTURE CAPITAL INC",
+      "ticker": "HASI",
+      "price": 25.55,
+      "volume": 1274645,
+      "description": "Hannon Armstrong Sustainable Infrastructure Capital Inc provides debt and equity financing to the energy markets in the United States. The company focuses on investments in two types of projects: energy-efficiency projects and renewable-energy projects. Energy-efficiency projects reduce the energy use and energy cost of building or facility through the improvement or installation of building components including heat, ventilation, and air conditioning systems; lights; energy controls; roofs; windows; building shells; and heat and power systems. Renewable-energy projects deploy cleaner energy sources such as solar and wind to generate power production. The company also provides financing solutions for other projects to improve energy efficiency and the environment.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lmhhbm5vbmFybXN0cm9uZy5jb20/images/2023-05-01_logo.png",
+      "home_page_url": "https://www.hannonarmstrong.com",
+      "market_cap": 2809758233.9249997,
+      "sic_description": "REAL ESTATE INVESTMENT TRUSTS",
+      "id": 24
+    },
+    {
+      "name": "TransAlta Corporation",
+      "ticker": "TAC",
+      "price": 8.16,
+      "volume": 409709,
+      "description": "TransAlta is an independent power producer based in Alberta, Canada. The company operates a diverse and growing fleet of electrical power generation assets in Canada, the United States, and Australia consisting of hydro, wind, solar, battery storage, gas and energy transition facilities. The majority of the company's revenues are derived from the sale of generation capacity, electricity, thermal energy, environmental attributes, and byproducts of power generation.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3cudHJhbnNhbHRhLmNvbQ/images/2023-12-01_logo.svg",
+      "home_page_url": "https://ww.transalta.com",
+      "market_cap": 2527234500,
+      "id": 25
+    },
+    {
+      "name": "MGM RESORTS INTERNATIONAL",
+      "ticker": "MGM",
+      "price": 40.35,
+      "volume": 4936963,
+      "description": "MGM Resorts is the largest resort operator on the Las Vegas Strip with 35,000 guest rooms and suites, representing about one fourth of all units in the market. The company's Vegas properties include MGM Grand, Mandalay Bay, Park MGM, Luxor, New York-New York, and Bellagio. The Strip contributed approximately 74% of total EBITDAR in 2022. MGM also owns U.S. regional assets, which represented 31% of 2022 EBITDAR (MGM's Macao EBITDAR was negative in 2022). MGM's U.S. sports and iGaming operations are currently a high-single-digit percentage of its total revenue. The company also operates the 56%-owned MGM China casinos with a new property that opened on the Cotai Strip in early 2018. Further, we estimate MGM will open a resort in Japan in 2030.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lm1nbXJlc29ydHMuY29t/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.mgmresorts.com",
+      "market_cap": 13636008569.52,
+      "sic_description": "HOTELS & MOTELS",
+      "id": 26
+    },
+    {
+      "name": "The Hershey Company",
+      "ticker": "HSY",
+      "price": 190.62,
+      "volume": 1024278,
+      "description": "Hershey is a leading confectionery manufacturer in the U.S. (around a $25 billion market), controlling around 45% of the domestic chocolate space (per IRI, as cited by Hershey). Beyond its namesake label, the firm's mix has expanded over the last 85 years and now consists of 100 brands, including Reese's, Kit Kat, Kisses, and Ice Breakers. Hershey's products are sold in about 80 countries, albeit with just a high-single-digit percentage of sales coming from markets outside the U.S., including Brazil, India, and Mexico. The firm has sought inorganic opportunities to extend its reach beyond its core confection business, adding Amplify Snack Brands and its Skinny Pop ready-to-eat popcorn to its mix, Pirate Brands, and Dot's Pretzels over the past few years.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnRoZWhlcnNoZXljb21wYW55LmNvbQ/images/2023-11-22_logo.svg",
+      "home_page_url": "https://www.thehersheycompany.com",
+      "market_cap": 38894675254.608795,
+      "sic_description": "SUGAR & CONFECTIONERY PRODUCTS",
+      "id": 27
+    },
+    {
+      "name": "Shopify Inc. Class A subordinate voting shares",
+      "ticker": "SHOP",
+      "price": 72.52,
+      "volume": 9569214,
+      "description": "Shopify offers an e-commerce platform primarily to small and medium-size businesses. The firm has two segments. The subscription solutions segment allows Shopify merchants to conduct e-commerce on a variety of platforms, including the company's website, physical stores, pop-up stores, kiosks, social networks (Facebook), and Amazon. The merchant solutions segment offers add-on products for the platform that facilitate e-commerce and include Shopify Payments, Shopify Shipping, and Shopify Capital.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnNob3BpZnkuY29t/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.shopify.com",
+      "market_cap": 91901563091.32,
+      "id": 28
+    },
+    {
+      "name": "Archer Aviation Inc.",
+      "ticker": "ACHR",
+      "price": 6.51,
+      "volume": 6175777,
+      "description": "Archer Aviation Inc advances the benefits of sustainable air mobility. It is creating the electric airline that moves people throughout cities in a quick, safe, sustainable, and cost-effective manner. It is designing, manufacturing, and operating a fully electric vertical takeoff and landing aircraft that can carry four passengers for around 60 miles at speeds of up to 150 mph while producing minimal noise.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmFyY2hlci5jb20/images/2023-05-01_logo.png",
+      "home_page_url": "https://www.archer.com",
+      "market_cap": 1869032671.298,
+      "sic_description": "AIRCRAFT",
+      "id": 29
     }
   ]
 }

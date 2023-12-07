@@ -49,9 +49,9 @@ if(state){
 }
 
 return (
-    <div>
-    <h1 onClick={handleName}>{state.name}</h1>
-    <button onClick={goBack}>Go back</button>
+    <div className="metrics-container">
+    <h1 onClick={handleName} className="metrics"> {state.name} </h1>
+    <button className="remove-stock" onClick={goBack}>Go back</button>
     </div>
 )
 }

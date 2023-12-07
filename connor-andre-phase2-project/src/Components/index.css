@@ -1,5 +1,5 @@
 html {
-  background-color: #ffffff;
+  background-color: #f9e9e9;
 }
 
 nav {
@@ -8,12 +8,12 @@ nav {
   justify-content: space-around;  
   padding: 2% 0;
   font-size: 1.5rem;
-  background-color: white;
+  background-color: ece9e9;
   margin-top: 5%;
-  margin-bottom: -5%;
+  margin-bottom: -3%;
 }
 
-svg {
+.home-icons {
   color: rgb(198, 42, 7);
   font-size:150%;
   margin: 10%;
@@ -47,10 +47,11 @@ svg:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: rgb(198, 42, 7)solid;
+  border: #f4f3f3 solid;
   box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
   border-width: thin;
   border-radius: 20px;
+  background-color: white;
 }
 
 .saved-pic {
@@ -102,6 +103,7 @@ svg:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10%;
 
 }
 
@@ -109,7 +111,9 @@ svg:active {
   margin-top: 5%;
   height: 5vh;
   width: 40vh;
+  font-family: 'Courier New', Courier, monospace;
   font-size: x-large;
+  border-color:  #f9e9e9;
   border-radius: 2%;
 }
 
@@ -122,75 +126,108 @@ svg:active {
 
 
 .stock-pic {
-  padding: 5%;
+  padding: 4%;
   margin: 5%; 
-  /* width: 30%;
-  margin: 2%; */
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: rgb(198, 42, 7)solid;
+  border:#f4f3f3 solid;
   box-shadow: 0 2px 6px 0 rgba(205, 33, 17, 0.14);
   border-width: thin;
   border-radius: 20px;
+  background-color: white;
+
 }
 
 /* Stock details */
 
+/* .stock-details-container {
+  gap: 10%
+
+} */
+
 .stock-details {
-  max-width: 80%;
-  margin: 10%;
-  text-align: center;
-  display: flex;
+  max-width: 100%;
+  margin: 5%;
+  padding: 1%;
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 /*Front Card */
 
+.icon {
+  /* max-width: 100%; */
+  font-size: 30px;
+  margin-top: 5%;
+  color: rgb(24, 204, 114);
+  
+}
+
 .stock-name {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Garamond;
+  font-size: 150%;
+  font-weight: bold;
+  /* margin-bottom: 3%;
+  margin-left: 3%; */
 
 }
 
 .stock-sic {
-font-size: medium;
-font-weight: 200;
-}
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Garamond;
+  font-size: 100%;
+  /* margin-bottom: 3%;
+  margin-left: 5%; */
+
+} 
 
 .stock-price {
-  font-size: x-large;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  font-family: Garamond;
+  /* font-size: 180%;
+  margin-left: 10%; */
+
 }
 
 /*Back Card */
 
 .stock-volume {
+  text-align: center;
   font-size: x-large;
   font-weight: bold;
+  margin-top: 15%;
 }
 
 .stock-cap {
+  text-align: center;
   font-size: large;
   margin-top: 0%;
+  font-weight: bold;
 }
 
 .stock-description{ 
-margin-bottom: 20%;
+  text-align: center;
 }
 
 
-h2 {
-  width: 100%;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 img {
   width: 75%;
-  height: 30vh;
-  padding: 3%;
+  height: 25vh;
+  padding: 4%;
+  margin: 2%;
   background: url('../images/profile.jpg') center center / cover;
   border-radius: 10px;
   display: flex;
@@ -202,13 +239,13 @@ img {
 }
 
 .stock-profile {
-  width: 100%;
-  background-color: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+
 }
+
 
 /* Welcome Page */
 
@@ -256,62 +293,85 @@ img {
   font-size: 3rem;
   border: none;
   background: white;
+}
+
+/*Metrics Page*/
+
+.metrics-container{
+  margin-top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.metrics {
+  padding: 2%;
+  color: rgb(198, 42, 7);
 
 }
 
 
-/* .stock-page {
-  height: calc(100% - 44px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-} */
-
-/* 
-.likes-button {
-  background: #fff;
-  box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-size: 2rem;
-  transition: transform 500ms ease;
-} */
+/*Buttons*/
 
 .buttons {
   display: flex;
-  flex: auto;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction:row;
   align-items: center;
-  margin-inline: 10px;
-  margin-left: -3%;
-  margin-top: -20%;
- 
+  margin-top: 5%;
+  margin-bottom: 5%;
+  gap: 30%
+}
+
+.like-button {
+  background: #fff;
+  border: #fb8332;
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 500ms ease;
+}
+
+.dislike-button {
+  background: #fff;
+  border: #fb8332;
+  box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  border-radius: 50%;
+  transition: transform 500ms ease;
 }
 
 .like {
-  margin: 100%;
   height: 48px;
   width: 48px;
   font-size: 3rem;
+  color: rgb(24, 204, 114);
   border: none;
-  background: white;
+  
 }
+
 .like:hover {
   transform: translateY(-5px);
 }
 
 .dislike {
-  margin: 100%;
+
   height: 48px;
   width: 48px;
-  font-size: 3rem;
+  font-size: 4rem;
+  color: red;
   border: none;
-  background: white;
+
+
 }
 .dislike:hover {
   transform: translateY(-5px);
@@ -346,6 +406,8 @@ img {
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
+  margin-top: 4%;
+  margin-bottom: 8%;
 }
 
 .button-4:hover,
@@ -409,6 +471,25 @@ img {
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
+}
+
+.name{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+.sic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10%;
 }
 
 

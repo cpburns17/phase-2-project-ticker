@@ -6,13 +6,22 @@ import { useLocation, useNavigate } from "react-router-dom"
 import { GoHeartFill } from "react-icons/go";
 import { RxCross1 } from "react-icons/rx";
 import { FaFire } from "react-icons/fa";
+import { FaRegBuilding } from "react-icons/fa";
+import { AiOutlineStock } from "react-icons/ai";
+import { TiBusinessCard } from "react-icons/ti";
 
 
 
 
 
+import { useOutletContext } from "react-router-dom";
 
-function StockCard ({stocks}) {
+
+
+
+function StockCard () {
+
+    const {stocks} = useOutletContext()
 
     const {state} = useLocation()
 
@@ -31,6 +40,8 @@ function StockCard ({stocks}) {
     const storeTickers = stocks?.map((stock)=>{
         return stock.ticker
     })
+
+    console.log(storeTickers)
 
     let featuredStock = storeTickers[(Math.floor(Math.random() * storeTickers?.length))];
 
@@ -76,12 +87,14 @@ function StockCard ({stocks}) {
             })
         }, [])}
 
-     
-    function renderWelcome () {
-        setWelcomePage(!welcomePage)
-        randomStock()
+        else{
+            useEffect(() => {
+                randomStock()
+            }, [])
+    
+        }
 
-    }
+
 
     function flipCard () {
         setFrontCard(!frontCard)
@@ -147,50 +160,52 @@ function StockCard ({stocks}) {
 
 return (
 <div className="card">  
-    {welcomePage ? (
-        <div className="stock-welcome">
-                <img alt="card-welcome" src={'https://static.dezeen.com/uploads/2017/08/tinder-redesign-graphics_dezeen_sq-1.jpg'}  />
-            <div className="stock-welcome-info">
-                <h4>Welcome to Ticker!</h4>
-                <h4 className="welcome-line2">The #1 Stock Matchmaker</h4>
-                <p className="instructions">Instructions:
-                    Everytime you click - you'll be matched with a new, random stock. Click on the stock picture to see detailed information about the stocks trade history, trade volume, and company information. If you want to invest in this stock, click the likes button to add it to your "Matches" list. 
-                    Looking for a specific stock in particular? Use the "Search" bar to search by the company's ticker symbol.
-                    
-                    To get started, click below!
-                </p>
-                <button className="button-5"onClick={renderWelcome}> Begin </button>
-            </div>
-        </div>
-    ) : (    
+ 
         <div className="stock-profile">
             {frontCard ? (
             <div className="stock-pic">
-                <img alt="card-front" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
+                <img className="stock-image" alt="card-front" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
+                <div className="stock-details-container">
                 <div className="stock-details">
-                    <h2 className="stock-name">{stockData.name} ({stockData.ticker})</h2>
-                    <h2 className="stock-sic">{sic}</h2>
-                    <h2 className="stock-price">Price: ${price} {stockData.currency_name}</h2>
+                    <div className="name">
+                        <div className="icon">
+                            <TiBusinessCard />
+                        </div>
+                        <span className="stock-name"> {stockData.name} ({stockData.ticker})</span>
+                    </div>
+
+                    <div className="sic">
+                        <div className="icon"> 
+                            <FaRegBuilding/>
+                        </div>
+                        <span className="stock-sic">{sic}</span>
+                    </div>
+                    <div className="price">
+                        <div className="icon"> 
+                            <AiOutlineStock className="icon" />
+                        </div>
+                        <h2 className="stock-price"> ${price} {stockData.currency_name}</h2>
+                    </div>
+                </div>
                 </div>
             </div> ) 
                 
             : (
 
             <div className="stock-pic">
-                <img alt="card-back" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
+                <img className="stock-image" alt="card-back" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
                 <div className="stock-details">
                     <p className="stock-volume">Volume: ${numberWithCommas(volume)}</p>
                     <p className="stock-cap">Market Cap: ${numberWithCommas(stockData.market_cap)}</p>
                     <p classsName="stock-description">About me: {stockData.description}</p>
-                    <button className="button-4" onClick={() => handleMetrics(stockData)}>See Company's Metrics</button>  
+                    <button className="button-4" onClick={() => handleMetrics(stockData)}>See Company Metrics</button>  
                 </div>       
             </div> )}
-
-            <div className="buttons">
-                <button onClick={() => randomStock()} className="dislike"> <RxCross1 /> </button>
-                <button onClick={handleLike} className="like"> <GoHeartFill color="rgb(24, 204, 114)" /> </button>
-            </div>
-        </div>) }
+        </div>
+        <div className="buttons">
+                <button className="dislike-button" onClick={() => randomStock()} > <RxCross1 className="dislike" /> </button>
+                <button className="like-button" onClick={handleLike} > <GoHeartFill className="like"/> </button>
+        </div>
 </div> 
 )
 }

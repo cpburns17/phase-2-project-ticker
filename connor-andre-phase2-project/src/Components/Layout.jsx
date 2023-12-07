@@ -1,6 +1,5 @@
 
 import Header from "./Header";
-import Footer from "./Footer";
 import {Outlet} from "react-router-dom"
 import {useState, useEffect} from "react"
 
@@ -66,7 +65,6 @@ function Layout () {
         <div className="main">
             <Outlet context={{stocks, setStocks, handleSearch, filteredStocks, search} }/>
         </div>
-        <Footer />
     </>
   )
 }
