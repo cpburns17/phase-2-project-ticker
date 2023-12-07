@@ -143,8 +143,9 @@ svg:active {
 /* Stock details */
 
 .stock-details-container {
-  margin-top: 10%;
+
   margin-bottom: 5%;
+  
 
 }
 
@@ -153,6 +154,10 @@ svg:active {
   display:flex;
   flex-direction: column;
   margin: 3%;
+  border:#f4f3f3 solid;
+  box-shadow: 0 2px 6px 0 rgba(205, 33, 17, 0.14);
+  border-width: thin;
+  border-radius: 20px;
 }
 
 /*Front Card */
