@@ -129,6 +129,18 @@
       "market_cap": 1869032671.298,
       "sic_description": "AIRCRAFT",
       "id": 29
+    },
+    {
+      "name": "OppFi Inc.",
+      "ticker": "OPFI",
+      "price": 3.94,
+      "volume": 701486,
+      "description": "OppFi Inc is a financial technology platform that powers banks to help the everyday consumer gain access to credit with digital specialty finance products.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lm9wcGZpLmNvbQ/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.oppfi.com",
+      "market_cap": 67904573.0908,
+      "sic_description": "FINANCE SERVICES",
+      "id": 30
     }
   ]
 }

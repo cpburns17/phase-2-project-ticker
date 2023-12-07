@@ -126,7 +126,7 @@ svg:active {
 
 
 .stock-pic {
-  padding: 4%;
+  padding-top: 4%;
   margin: 5%; 
   width: 100%;
   height: 100%;
@@ -143,17 +143,17 @@ svg:active {
 
 /* Stock details */
 
-/* .stock-details-container {
-  gap: 10%
+.stock-details-container {
+  margin-top: 10%;
+  margin-bottom: 10%;
 
-} */
+}
 
 .stock-details {
   max-width: 100%;
-  margin: 5%;
-  padding: 1%;
   display:flex;
   flex-direction: column;
+  margin: 3%;
 }
 
 /*Front Card */
@@ -162,6 +162,7 @@ svg:active {
   /* max-width: 100%; */
   font-size: 30px;
   margin-top: 5%;
+  margin-left: 3%;
   color: rgb(24, 204, 114);
   
 }
@@ -196,8 +197,7 @@ svg:active {
   justify-content: flex-end;
   flex-direction: column;
   font-family: Garamond;
-  /* font-size: 180%;
-  margin-left: 10%; */
+  font-size: 30px;
 
 }
 
@@ -207,7 +207,7 @@ svg:active {
   text-align: center;
   font-size: x-large;
   font-weight: bold;
-  margin-top: 15%;
+  margin-top: 8%;
 }
 
 .stock-cap {
@@ -219,6 +219,7 @@ svg:active {
 
 .stock-description{ 
   text-align: center;
+
 }
 
 
@@ -477,19 +478,25 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  gap: 3%;
 }
 .sic {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
   gap: 5%;
 }
 .price {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  gap: 15%;
 }
 
 
