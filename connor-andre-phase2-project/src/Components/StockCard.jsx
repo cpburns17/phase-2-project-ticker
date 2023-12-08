@@ -5,11 +5,19 @@ import "./index.css"
 import { useLocation, useNavigate } from "react-router-dom"
 import { GoHeartFill } from "react-icons/go";
 import { RxCross1 } from "react-icons/rx";
+import { FaFire } from "react-icons/fa";
+import { FaRegBuilding } from "react-icons/fa";
+import { AiOutlineStock } from "react-icons/ai";
+import { TiBusinessCard } from "react-icons/ti";
+
+import { useOutletContext } from "react-router-dom";
+
+import { useFingerEvents } from "react-finger";
 
 
+function StockCard () {
 
-
-function StockCard ({stocks}) {
+    const {stocks} = useOutletContext()
 
     const {state} = useLocation()
 
@@ -28,20 +36,20 @@ function StockCard ({stocks}) {
         return stock.ticker
     })
 
+
     let featuredStock = storeTickers[(Math.floor(Math.random() * storeTickers?.length))];
 
     fetch(`https://api.polygon.io/v3/reference/tickers/${featuredStock}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         setImage(data.results.branding.logo_url)
         setSic(data.results.sic_description)
         setStockData(data.results)
+        setSic(data.results.sic_description)
 
         fetch(`https://api.polygon.io/v1/open-close/${data.results.ticker}/2023-12-04?adjusted=true&apiKey=15QmMowx5gfJE_p1AL_gGzjGQm9kfYtr`)
         .then(res=> res.json())
         .then(data => {
-            console.log(data)
             setPrice(data.close)
             setVolume(data.volume)
         });
@@ -72,12 +80,13 @@ function StockCard ({stocks}) {
             })
         }, [])}
 
-     
-    function renderWelcome () {
-        setWelcomePage(!welcomePage)
-        randomStock()
+        else{
+            useEffect(() => {
+                randomStock()
+            }, [])
+        }
 
-    }
+
 
     function flipCard () {
         setFrontCard(!frontCard)
@@ -135,59 +144,84 @@ function StockCard ({stocks}) {
             price : price,
             image : image,
             home_page_url : stockData.homepage_url,
-            market_cap: stockData.market_cap
+            market_cap: stockData.market_cap,
+            sic_description: sic
         }
         navigate('/stockmetrics', {state: stockMetrics})
     }
 
+    const handleSwipe = (event) => {
+        console.log('onSwipe', event.direction);
+
+    
+        switch (event.direction) {
+          case 'left': 
+          console.log('Left swipe detected');
+          randomStock()
+            break;
+          case 'right':
+            console.log('Right swipe detected');
+            randomStock()
+            break;
+          default:
+            console.log('Unexpected swipe direction:', event.direction);
+        }
+      };
+    
+      const events = useFingerEvents({
+        onSwipe: handleSwipe,
+      });
+
 return (
-<div className="card">  
-    {welcomePage ? (
-        <div className="stock-welcome">
-                <img alt="card-welcome" src={'https://static.dezeen.com/uploads/2017/08/tinder-redesign-graphics_dezeen_sq-1.jpg'}  />
-            <div className="stock-welcome-info">
-                <h2>Welcome to Ticker!</h2>
-                <h2>The #1 Stock Matchmaker</h2>
-                <h2></h2>
-                <p>Instructions:
-                    Everytime you click - you'll be matched with a new, random stock. Click on the stock picture to see detailed information about the stocks trade history, trade volume, and company information. If you want to invest in this stock, click the likes button to add it to your "Matches" list. 
-                    Looking for a specific stock in particular? Use the "Search" bar to search by the company's ticker symbol.
-                    
-                    To get started, click below!
-                </p>
-                <button onClick={renderWelcome}>Begin!</button>
-            </div>
-        </div>
-    ) : (    
+<div className="card" {...events} >  
+ 
         <div className="stock-profile">
             {frontCard ? (
             <div className="stock-pic">
-                <img alt="card-front" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
+                <img className="stock-image" alt="card-front" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`}  onClick={flipCard}/>
+                <div className="stock-details-container">
                 <div className="stock-details">
-                    <h2 className="stock-name">{stockData.name} ({stockData.ticker})</h2>
-                    <h2>{sic}</h2>
-                    <h2>Price: ${price} {stockData.currency_name}</h2>
+                    <div className="name">
+                        <div className="icon">
+                            <TiBusinessCard />
+                        </div>
+                        <span className="stock-name"> {stockData.name} ({stockData.ticker})</span>
+                    </div>
+
+                    <div className="sic">
+                        <div className="icon"> 
+                            <FaRegBuilding/>
+                        </div>
+                        <span className="stock-sic">{sic}</span>
+                    </div>
+                    <div className="price">
+                        <div className="icon"> 
+                            <AiOutlineStock className="icon" />
+                        </div>
+                        <h2 className="stock-price"> ${price} {stockData.currency_name}</h2>
+                    </div>
+                </div>
                 </div>
             </div> ) 
                 
             : (
 
             <div className="stock-pic">
-                <img alt="card-back" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
+                <img className="stock-image" alt="card-back" src={`${image}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`} onClick={flipCard}/>
                 <div className="stock-details">
-                    <p>Volume: ${numberWithCommas(volume)} {(stockData.currency_name)}</p>
-                    <p>Market Cap: {numberWithCommas(stockData.market_cap)}</p>
-                    <p>Description: {stockData.description}</p>
-                    <button onClick={() => handleMetrics(stockData)}>See Company's Metrics</button>  
+                    <p className="stock-volume">Volume: ${numberWithCommas(volume)}</p>
+                    <p className="stock-cap">Market Cap: ${numberWithCommas(stockData.market_cap)}</p>
+                    <p className="stock-bio"><strong>About me: </strong>{stockData.description}</p>
+                    <button className="button-4" onClick={() => handleMetrics(stockData)}>See Company Metrics</button>  
                 </div>       
             </div> )}
-
-            <div className="buttons">
-                <button onClick={() => randomStock()} className="dislike"> <RxCross1 /> </button>
-                <button onClick={handleLike} className="like"> <GoHeartFill color="rgb(24, 204, 114)" /> </button>
-            </div>
-        </div>) }
+        </div>
+        <div className="buttons">
+                <button className="dislike-button" onClick={() => randomStock()} > <RxCross1 className="dislike" /> </button>
+                <button className="like-button" onClick={handleLike} > <GoHeartFill className="like"/> </button>
+        </div>
 </div> 
+
 )
 }
 

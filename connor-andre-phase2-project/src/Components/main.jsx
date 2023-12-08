@@ -4,6 +4,7 @@ import "./index.css"
 
 import App from "./App"
 import Layout from "./Layout"
+import WelcomePage from "./WelcomePage";
 import SavedStocks from "./SavedStocks";
 import SearchBar from "./SearchBar";
 import StockCard from "./StockCard";
@@ -19,7 +20,7 @@ const routes = createBrowserRouter([
       children: [
         {
           path: "/",
-          element: <App />,
+          element: <WelcomePage />,
         },
         {
           path: "/savedstocks",

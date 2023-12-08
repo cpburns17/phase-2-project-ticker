@@ -163,47 +163,47 @@ console.log(financials_2022)
         })
 
     return (
-        <div>
-        <h1 onClick={handleName}>{state.name}</h1>
-        <div>
-            
-        <p>Select Start Date</p>
-        <select onChange={handleOnChangeStart} value={startDate.day} name="day">
-            <option value="" disabled selected hidden>DD</option>
-            {handleSelectDates('days')}
-        </select>
-        <select onChange={handleOnChangeStart} value={startDate.month} name='month'>
-            <option value="" disabled selected hidden>MM</option>
-            {handleSelectDates('months')} 
-        </select>
-        <select onChange={handleOnChangeStart} value={startDate.year} name='year'>
-            <option value="" disabled selected hidden>YYYY</option>
-            {handleSelectDates('years')}
-        </select>
-        <div>
-        <p>Select End Date</p>
-        <select onChange={handleOnChangeEnd} value={endDate.day} name="day">
-            <option value="" disabled selected hidden>DD</option>
-            {handleSelectDates('days')}
-        </select>
-        <select onChange={handleOnChangeEnd} value={endDate.month} name='month'>
-            <option value="" disabled selected hidden>MM</option>
-            {handleSelectDates('months')} 
-        </select>
-        <select onChange={handleOnChangeEnd} value={endDate.year} name='year'>
-            <option value="" disabled selected hidden>YYYY</option>
-            {handleSelectDates('years')}
-        </select>
-        </div>
-        <div>
-            <button onClick={handleGraph}>Create Graph</button>
-        </div>
-        <div>
-            <Graph timeAdapter={timeAdapter} dataSet={dataSet}/>
-        </div>
-        </div>
-        <button onClick={goBack}>Go back</button>
-        <button></button>
+        <div className="metrics-container">
+            <h1 className="metrics" >{state.name}</h1>
+            <p className="click-website"onClick={handleName}> Visit Website</p>
+            <div className="graph-stuff">
+                
+            <p>Select Start Date</p>
+            <select onChange={handleOnChangeStart} value={startDate.day} name="day">
+                <option value="" disabled selected hidden>DD</option>
+                {handleSelectDates('days')}
+            </select>
+            <select onChange={handleOnChangeStart} value={startDate.month} name='month'>
+                <option value="" disabled selected hidden>MM</option>
+                {handleSelectDates('months')} 
+            </select>
+            <select onChange={handleOnChangeStart} value={startDate.year} name='year'>
+                <option value="" disabled selected hidden>YYYY</option>
+                {handleSelectDates('years')}
+            </select>
+            <div>
+            <p>Select End Date</p>
+            <select onChange={handleOnChangeEnd} value={endDate.day} name="day">
+                <option value="" disabled selected hidden>DD</option>
+                {handleSelectDates('days')}
+            </select>
+            <select onChange={handleOnChangeEnd} value={endDate.month} name='month'>
+                <option value="" disabled selected hidden>MM</option>
+                {handleSelectDates('months')} 
+            </select>
+            <select onChange={handleOnChangeEnd} value={endDate.year} name='year'>
+                <option value="" disabled selected hidden>YYYY</option>
+                {handleSelectDates('years')}
+            </select>
+            </div>
+            <div>
+                <button onClick={handleGraph}>Create Graph</button>
+            </div>
+            <div>
+                <Graph timeAdapter={timeAdapter} dataSet={dataSet}/>
+            </div>
+            </div>
+            <button className="back-button" onClick={goBack}>Go back</button>
         </div>
     )
 }

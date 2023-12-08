@@ -15,14 +15,14 @@ function Header() {
   return (
     <div className="header">
       <nav>
-        <NavLink id="home" to="/">
-          <FaHome />
-        </NavLink>
         <NavLink id="search" to="/search">
-          <FaSearch />
+          <FaSearch className="home-icons"/>
+        </NavLink>
+        <NavLink id="home" to="/stockdetails">
+          <FaHome className="home-icons" />
         </NavLink>
         <NavLink id="matches" to="/savedstocks">
-          <FaFire />
+          <FaFire  className="home-icons"/>
         </NavLink>
       </nav>
     </div>

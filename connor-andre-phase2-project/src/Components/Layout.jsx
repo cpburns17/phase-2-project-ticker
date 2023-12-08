@@ -1,6 +1,5 @@
 
 import Header from "./Header";
-import Footer from "./Footer";
 import {Outlet} from "react-router-dom"
 import {useState, useEffect} from "react"
 
@@ -11,9 +10,6 @@ function Layout () {
     const [errors, setErrors] = useState(null)
     const [search, setSearch] = useState("")
 
-    function renderDelete(deleteStock) {
-        setStocks(stocks.filter((stock) => stock.id != deleteStock.id))
-    }
 
 
     useEffect(() => {
@@ -53,7 +49,7 @@ function Layout () {
 
     }, [])
 
-    const cleanArray = [new Set(stocks)]
+    
     
     function handleSearch(searchTerm){
         setSearch(searchTerm)
@@ -67,9 +63,8 @@ function Layout () {
     <>
         < Header />
         <div className="main">
-            <Outlet context={{stocks, setStocks, handleSearch, filteredStocks, search, renderDelete}}/>
+            <Outlet context={{stocks, setStocks, handleSearch, filteredStocks, search} }/>
         </div>
-        <Footer />
     </>
   )
 }

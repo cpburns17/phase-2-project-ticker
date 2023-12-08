@@ -19,14 +19,14 @@ function SearchBar () {
 
     const listSearch = filteredStocks.map((stock)=>{
         return <div>
-            <h1 onClick={() => handleClick(stock)}>{stock.ticker}</h1>
+            <h1 className="search-results"onClick={() => handleClick(stock)}>{stock.ticker}</h1>
         </div>
     })
     
     
     return (
-    
-        <div className="search-bar">
+    <div>
+        <div className="search-container">
             <div >
                 <input 
                 onChange={handleSearchChange}
@@ -35,9 +35,10 @@ function SearchBar () {
                 value={search}
                 />
                 <i className="search-box" />
+                {listSearch}
+            </div>
         </div>
-            {listSearch}
-        </div>
+    </div>
     )
     }
 export default SearchBar;
