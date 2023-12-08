@@ -5,6 +5,7 @@ import 'chart.js/auto'
 import Graph from "./Graph";
 
 function Metrics(){
+    
 
     const [startDate, setStartDate] = useState({
         day: '',
