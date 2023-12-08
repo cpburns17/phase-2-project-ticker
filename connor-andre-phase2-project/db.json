@@ -1,30 +1,6 @@
 {
   "stocks": [
     {
-      "name": "The Western Union Company",
-      "ticker": "WU",
-      "price": 11.64,
-      "volume": 4961869,
-      "description": "Western Union provides domestic and international money transfers through its global network of about 600,000 outside agents. The company handled over 270 million transactions in 2022 and is the largest money transfer company in the world.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lndlc3Rlcm51bmlvbi5jb20/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.westernunion.com",
-      "market_cap": 4344981170.400001,
-      "sic_description": "SERVICES-BUSINESS SERVICES, NEC",
-      "id": 15
-    },
-    {
-      "name": "Spire Inc.",
-      "ticker": "SR",
-      "price": 62.57,
-      "volume": 457279,
-      "description": "Spire Inc is a public utility holding company with three reportable business segments: Gas Utility , Gas Marketing and Midstream. The Gas Utility segment includes the regulated operations of Laclede Gas, Alabama Gas Corporation (Alagasco), and EnergySouth Inc. The Utilities businesses operations include the purchase, retail, distribution, and sale of natural gas in Missouri, Alabama, and Mississippi. The Gas Utility segment generates a majority of the company's revenue but is subject to seasonal fluctuations. The Gas Marketing segment includes Laclede Energy Resources, Inc, whose operations include the marketing of natural gas and related activities on a non-regulated basis and the Midstream segment includes transportation and storage of natural gas.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnNwaXJlZW5lcmd5LmNvbQ/images/2023-11-22_logo.svg",
-      "home_page_url": "https://www.spireenergy.com",
-      "market_cap": 3381781139.7999997,
-      "sic_description": "NATURAL GAS DISTRIBUTION",
-      "id": 17
-    },
-    {
       "name": "MURPHY USA INC.",
       "ticker": "MUSA",
       "price": 367.52,
@@ -37,18 +13,6 @@
       "id": 21
     },
     {
-      "name": "Six Flags Entertainment Corp.",
-      "ticker": "SIX",
-      "price": 24.95,
-      "volume": 1187556,
-      "description": "Six Flags Entertainment Corp owns and operate regional theme parks and water parks. The company operates around 27 theme parks and waterparks, 24 are located in the United States, two are located in Mexico and one is located in Montreal, Canada. The parks generally offer various rides, water attractions, themed areas, concerts, restaurants, game venues, and merchandise outlets.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnNpeGZsYWdzLmNvbQ/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.sixflags.com",
-      "market_cap": 2077565612.7900002,
-      "sic_description": "SERVICES-MISCELLANEOUS AMUSEMENT & RECREATION",
-      "id": 22
-    },
-    {
       "name": "RTX Corporation",
       "ticker": "RTX",
       "price": 83.13,
@@ -59,18 +23,6 @@
       "market_cap": 117864768249.48,
       "sic_description": "AIRCRAFT ENGINES & ENGINE PARTS",
       "id": 23
-    },
-    {
-      "name": "HANNON ARMSTRONG SUSTAINABLE INFRASTRUCTURE CAPITAL INC",
-      "ticker": "HASI",
-      "price": 25.55,
-      "volume": 1274645,
-      "description": "Hannon Armstrong Sustainable Infrastructure Capital Inc provides debt and equity financing to the energy markets in the United States. The company focuses on investments in two types of projects: energy-efficiency projects and renewable-energy projects. Energy-efficiency projects reduce the energy use and energy cost of building or facility through the improvement or installation of building components including heat, ventilation, and air conditioning systems; lights; energy controls; roofs; windows; building shells; and heat and power systems. Renewable-energy projects deploy cleaner energy sources such as solar and wind to generate power production. The company also provides financing solutions for other projects to improve energy efficiency and the environment.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lmhhbm5vbmFybXN0cm9uZy5jb20/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.hannonarmstrong.com",
-      "market_cap": 2809758233.9249997,
-      "sic_description": "REAL ESTATE INVESTMENT TRUSTS",
-      "id": 24
     },
     {
       "name": "TransAlta Corporation",
@@ -119,30 +71,6 @@
       "id": 28
     },
     {
-      "name": "Archer Aviation Inc.",
-      "ticker": "ACHR",
-      "price": 6.51,
-      "volume": 6175777,
-      "description": "Archer Aviation Inc advances the benefits of sustainable air mobility. It is creating the electric airline that moves people throughout cities in a quick, safe, sustainable, and cost-effective manner. It is designing, manufacturing, and operating a fully electric vertical takeoff and landing aircraft that can carry four passengers for around 60 miles at speeds of up to 150 mph while producing minimal noise.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmFyY2hlci5jb20/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.archer.com",
-      "market_cap": 1869032671.298,
-      "sic_description": "AIRCRAFT",
-      "id": 29
-    },
-    {
-      "name": "OppFi Inc.",
-      "ticker": "OPFI",
-      "price": 3.94,
-      "volume": 701486,
-      "description": "OppFi Inc is a financial technology platform that powers banks to help the everyday consumer gain access to credit with digital specialty finance products.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3Lm9wcGZpLmNvbQ/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.oppfi.com",
-      "market_cap": 67904573.0908,
-      "sic_description": "FINANCE SERVICES",
-      "id": 30
-    },
-    {
       "name": "Lemonade, Inc.",
       "ticker": "LMND",
       "price": 18.96,
@@ -155,30 +83,6 @@
       "id": 31
     },
     {
-      "name": "Lindsay Corporation",
-      "ticker": "LNN",
-      "price": 121.97,
-      "volume": 75444,
-      "description": "Lindsay Corp provides various proprietary water management and road infrastructure products and services. It has operations categorized into two main reporting segments: Irrigation, and Infrastructure. The company generates maximum revenue from the Irrigation segment. Its Irrigation segment includes manufacturing and marketing center pivot, lateral move, and hose reel irrigation systems, as well as various technology solutions such as GPS positioning and guidance, variable rate irrigation, wireless irrigation management, M2M communication technology, and smartphone applications. Geographically, it derives a majority of its revenue from the United States.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmxpbmRzYXkuY29t/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.lindsay.com",
-      "market_cap": 1319189636.24,
-      "sic_description": "FARM MACHINERY & EQUIPMENT",
-      "id": 32
-    },
-    {
-      "name": "DuPont de Nemours, Inc. Common Stock",
-      "ticker": "DD",
-      "price": 71.76,
-      "volume": 4455280,
-      "description": "DuPont is a diversified global specialty chemicals company created in 2019 as a result of the DowDuPont merger and subsequent separations. Its portfolio includes specialty chemicals and downstream products that serve the electronics and communication, automotive, construction, safety and protection, and water management industries. DuPont benefits from the ability to produce patented specialty chemicals that command pricing power. Noteworthy products include Kevlar, Tyvek, and Nomex, which have evolved over time to enable a wide range of applications across multiple industries.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmR1cG9udC5jb20/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.dupont.com",
-      "market_cap": 30412605034.239998,
-      "sic_description": "PLASTIC MATERIALS, SYNTH RESINS & NONVULCAN ELASTOMERS",
-      "id": 33
-    },
-    {
       "name": "TC Energy Corporation",
       "ticker": "TRP",
       "price": 38.13,
@@ -188,18 +92,6 @@
       "home_page_url": "https://www.tcenergy.com",
       "market_cap": 39468220000,
       "id": 34
-    },
-    {
-      "name": "Boyd Gaming Corporation",
-      "ticker": "BYD",
-      "price": 60.37,
-      "volume": 847020,
-      "description": "Boyd Gaming Corp is a multi-jurisdictional gaming company. The company operates wholly owned gaming entertainment properties (casino space, slot machines, table games, and hotel rooms) in Nevada, Illinois, Indiana, Iowa, Kansas, Louisiana, Mississippi, Missouri, Ohio, and Pennsylvania. Its business segments are separated by geographical regions: Las Vegas Locals; Downtown Las Vegas; and Midwest and South. Midwest and South holds the largest number of entertainment properties, and it generates most sales for the company. Boyd generates most of its revenue from its gaming operations.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmJveWRnYW1pbmcuY29t/images/2023-05-01_logo.svg",
-      "home_page_url": "https://www.boydgaming.com",
-      "market_cap": 5776801120.690001,
-      "sic_description": "HOTELS & MOTELS",
-      "id": 35
     },
     {
       "name": "Mettler-Toledo International",
@@ -214,16 +106,16 @@
       "id": 36
     },
     {
-      "name": "PROLOGIS, INC.",
-      "ticker": "PLD",
-      "price": 120.33,
-      "volume": 5388631,
-      "description": "Prologis was formed by the June 2011 merger of AMB Property and Prologis Trust. The company develops, acquires, and operates around 1.2 billion square feet of high-quality industrial and logistics facilities across the globe. The company also has a strategic capital business segment that has around $60 billion of third-party AUM. The company is organized into four global divisions (Americas, Europe, Asia, and other Americas) and operates as a real estate investment trust.",
-      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LnByb2xvZ2lzLmNvbQ/images/2023-05-01_logo.png",
-      "home_page_url": "https://www.prologis.com",
-      "market_cap": 109906350450,
-      "sic_description": "REAL ESTATE INVESTMENT TRUSTS",
-      "id": 37
+      "name": "Carvana Co.",
+      "ticker": "CVNA",
+      "price": 40.07,
+      "volume": 22337452,
+      "description": "Carvana Co is an e-commerce platform for buying and selling used cars. The company derives revenue from used vehicle sales, wholesale vehicle sales and other sales and revenues. The other sales and revenues include sales of loans originated and sold in securitization transactions or to financing partners, commissions received on VSCs and sales of GAP waiver coverage. The foundation of the business is retail vehicle unit sales. This drives the majority of the revenue and allows the company to capture additional revenue streams associated with financing, VSCs, auto insurance and GAP waiver coverage, as well as trade-in vehicles.",
+      "image": "https://api.polygon.io/v1/reference/company-branding/d3d3LmNhcnZhbmEuY29t/images/2023-05-01_logo.svg",
+      "home_page_url": "https://www.carvana.com",
+      "market_cap": 4448324499.639999,
+      "sic_description": "RETAIL-AUTO DEALERS & GASOLINE STATIONS",
+      "id": 38
     }
   ]
 }

@@ -14,10 +14,10 @@ function Graph({dataSet, timeAdapter}){
             {
                 label: 'Stock Price ($)',
                 data: dataSet,
-                borderColor:  'rgb(198, 42, 7)',
-                backgroundColor: 'rgb(196, 68, 39)',
+                borderColor:  'rgb(18, 198, 51)',
+                backgroundColor: 'rgb(18, 198, 51)',
                 fill: false,
-                pointRadius : 0
+                pointRadius: 0,
             }
         ]
     }
@@ -40,7 +40,7 @@ function Graph({dataSet, timeAdapter}){
     };
 
     return (
-        <Line data={chartData} options={chartOptions} />
+        <Line className="graph"data={chartData} options={chartOptions} />
     )
 }
 

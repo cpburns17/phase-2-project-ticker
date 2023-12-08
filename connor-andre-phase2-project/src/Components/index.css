@@ -2,15 +2,35 @@ html {
   background-color: #f9e9e9;
 }
 
+/* .ticker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -1%;
+  font-family: rocher;
+  font-style: italic;
+} */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 nav {
   display: flex;
   width: 100%;
   justify-content: space-around;  
-  padding: 2% 0;
+  padding: 2%;
+  padding-top: 4%;
   font-size: 1.5rem;
-  background-color: ece9e9;
+  background-color: white;
   margin-top: 5%;
-  margin-bottom: -3%;
+
+  border: #f4f3f3 solid;
+  box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
+  border-width: thin;
+  border-radius: 20px;
 }
 
 .home-icons {
@@ -328,6 +348,7 @@ img {
 
 .metrics-container{
   margin-top: 20%;
+  padding-bottom: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -335,7 +356,7 @@ img {
   width: 100%;
   border:#f4f3f3 solid;
   box-shadow: 0 2px 6px 0 rgba(205, 33, 17, 0.14);
-  border-width: thin;
+  border-width: thi;
   border-radius: 20px;
   background-color: white;
 
@@ -357,10 +378,93 @@ img {
   margin-bottom: 5%;
 }
 
-/* .graph-stuff {
+.graph {
+margin-top: 10%;
+}
+
+
+.date-input-container {
   display: flex;
-  flex-direction: column;
-} */
+  justify-content: center;
+  width: 100%;
+
+
+}
+
+.graph-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+
+}
+
+.graph-button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: rgb(62, 157, 221);
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.select {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+  text-align: center;
+  align-items: center;
+  background-clip: padding-box;
+  background-color: rgb(198, 42, 7);
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+
+}
+
+.dates {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(198, 42, 7);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
 
 .back-button {
   align-items: center;
@@ -466,13 +570,13 @@ img {
   cursor: pointer;
   display: inline-flex;
   font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   justify-content: center;
   line-height: 1.25;
-  margin: 0px;
+  margin: 40px;
   min-height: 2rem;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  padding: calc(.875rem - 5px) calc(1.5rem - 4px);
   position: relative;
   text-decoration: none;
   transition: all 250ms;
@@ -480,7 +584,6 @@ img {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
-  width: auto;
   margin-top: 4%;
   margin-bottom: 8%;
 }

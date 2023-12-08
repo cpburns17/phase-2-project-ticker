@@ -85,6 +85,9 @@ function Layout () {
 
   return (
     <>
+    {/* <h1 className="ticker">
+        Ticker
+    </h1> */}
         < Header />
         <div className="main">
             <Outlet context={{stocks, setStocks, handleSearch, filteredStocks, search} }/>
