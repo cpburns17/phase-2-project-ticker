@@ -18,14 +18,15 @@ function Metrics(){
         year: ''
     })
 
-    const [financials, setFinancials] = useState([])
+    const [financials_2023, setFinancials_2023] = useState([])
+    const [financials_2022, setFinancials_2022] = useState([])
     const [graphData, setGraphData] = useState([])
+    const [fetcher,setFetcher] = useState(true)
 
     const {state} = useLocation()
     const id = {
         ticker : state.ticker
     }
-    console.log(state)
 
     const navigate = useNavigate();
 
@@ -39,13 +40,23 @@ function Metrics(){
         }
     }
 
+    function fetchFinancials (nextUrl){
+        if(nextUrl){
+            fetch()
+        }
+    }
+
 useEffect(()=>{
     fetch(`https://api.polygon.io/vX/reference/financials?ticker=${state.ticker}&timeframe=annual&limit=2&sort=period_of_report_date&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
     .then((res)=>res.json())
     .then((data)=>{
-        setFinancials(data.results)
+        console.log(data.results)
+        setFinancials_2023(data.results[0].financials)
+        setFinancials_2022(data.results[1].financials)
     })
-},[state])
+},[fetcher])
+
+console.log(financials_2022)
 
 
     function handleSelectDates(x) {
@@ -93,17 +104,54 @@ useEffect(()=>{
         })
     }
 
+    function handleFetch(nextUrl){
+        fetch(nextUrl + `&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
+        .then((res)=>res.json())
+        .then((data)=>{
+            if(data.next_url){
+                console.log(data)
+                setGraphData((prevState) => {
+
+                    let array1 = prevState
+                    let array2 = data.results
+
+                    const newArr = array1.concat(array2)
+
+                    return newArr
+                } )
+                handleFetch(data.next_url)
+            } else {
+                setGraphData((prevState) => {
+
+                    let array1 = prevState
+                    let array2 = data.results
+
+                    const newArr = array1.concat(array2)
+
+                    console.log(newArr)
+                    return newArr
+                } )
+                console.log(data)
+
+            }
+            
+        })
+    }
+
     function handleGraph(){
             fetch(`https://api.polygon.io/v2/aggs/ticker/${state.ticker}/range/1/day/${startDate.year}-${startDate.month}-${startDate.day}/${endDate.year}-${endDate.month}-${endDate.day}?adjusted=true&sort=asc&limit=120&apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
             .then((res)=>res.json())
             .then((data)=>{
-                setGraphData(data.results)
+                if(data.next_url){
+                    setGraphData(data.results)
+                    handleFetch(data.next_url)
+                } else {
+                    console.log(data)
+                    setGraphData(data.results) 
+                }
             })
-
-            
         }
 
-        
         const dataSet = graphData.map(closePrice=>{
             return closePrice.c
         })
@@ -113,8 +161,6 @@ useEffect(()=>{
             const formattedTime = `${timeStamp.getFullYear()}-${(timeStamp.getMonth()+1).toString().padStart(2, '0')}-${timeStamp.getDate().toString().padStart(2, '0')}`
             return formattedTime
         })
-        
-        console.log(timeAdapter)
 
     return (
         <div>
@@ -157,6 +203,7 @@ useEffect(()=>{
         </div>
         </div>
         <button onClick={goBack}>Go back</button>
+        <button></button>
         </div>
     )
 }

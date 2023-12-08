@@ -15,8 +15,8 @@ function Graph({dataSet, timeAdapter}){
             {
                 label: 'Stock Price ($)',
                 data: dataSet,
-                borderColor: 'blue',
-                backgroundColor: 'lightblue',
+                borderColor:  'rgb(198, 42, 7)',
+                backgroundColor: 'rgb(196, 68, 39)',
                 fill: false,
             }
         ]
