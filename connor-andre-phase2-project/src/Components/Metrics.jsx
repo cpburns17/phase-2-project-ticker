@@ -5,6 +5,7 @@ import 'chart.js/auto'
 import Graph from "./Graph";
 
 function Metrics(){
+    
 
     const [startDate, setStartDate] = useState({
         day: '',
@@ -203,7 +204,6 @@ console.log(financials_2022)
         </div>
         </div>
         <button onClick={goBack}>Go back</button>
-        <button></button>
         </div>
     )
 }
