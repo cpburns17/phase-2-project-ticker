@@ -49,7 +49,7 @@ function Layout () {
 
     }, [])
 
-    const cleanArray = [new Set(stocks)]
+    
     
     function handleSearch(searchTerm){
         setSearch(searchTerm)

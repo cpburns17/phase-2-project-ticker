@@ -38,6 +38,7 @@ svg:active {
 
 .main-pic {
   width: 100%;
+  padding: 5%; 
 }
 
 .saved-stock {
@@ -65,6 +66,10 @@ svg:active {
   align-items: center;
   font-size: medium;
   padding: 2%;
+}
+
+.saved-about {
+  font-size: medium;
 }
 
 
@@ -143,7 +148,7 @@ svg:active {
 /* Stock details */
 
 .stock-details-container {
-
+  padding: 5%;
   margin-bottom: 5%;
   
 
@@ -190,6 +195,7 @@ svg:active {
   justify-content: center;
   flex-direction: column;
   font-family: Garamond;
+  font-weight: bold;
   font-size: 100%;
   /* margin-bottom: 3%;
   margin-left: 5%; */
@@ -276,11 +282,16 @@ img {
   box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
   border-width: thick;
   border-radius: 20px;
+  background-color: white;
 }
+.welcome-line2 {
+  font-weight: bold;
+}
+
 .stock-welcome-info {
   margin-bottom: 5%;
   text-align: center;
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,7 +299,16 @@ img {
   font-size: x-large;
 }
 
+.instructions-title {
+  margin-top: -5%;
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: bold;
+  font-size: small;
+}
+
 .instructions {
+  font-style: italic;
   font-size: small;
   margin-bottom: 10%;
   margin-top: 0%;
@@ -316,7 +336,8 @@ img {
 }
 
 .metrics {
-
+  display: flex;
+  text-align: center;
   font-family:'Times New Roman', Times, serif;
   padding: 2%;
   color: rgb(198, 42, 7);

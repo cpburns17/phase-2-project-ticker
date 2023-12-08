@@ -12,7 +12,7 @@ import { TiBusinessCard } from "react-icons/ti";
 
 import { useOutletContext } from "react-router-dom";
 
-
+import { useFingerEvents } from "react-finger";
 
 
 function StockCard () {
@@ -31,20 +31,17 @@ function StockCard () {
 
 
 
-
     function randomStock() {
     const storeTickers = stocks?.map((stock)=>{
         return stock.ticker
     })
 
-    console.log(storeTickers)
 
     let featuredStock = storeTickers[(Math.floor(Math.random() * storeTickers?.length))];
 
     fetch(`https://api.polygon.io/v3/reference/tickers/${featuredStock}?apiKey=vIx3B06AYjzS_w8q9C8UOpoWUeVqpplQ`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         setImage(data.results.branding.logo_url)
         setStockData(data.results)
         setSic(data.results.sic_description)
@@ -52,7 +49,6 @@ function StockCard () {
         fetch(`https://api.polygon.io/v1/open-close/${data.results.ticker}/2023-12-04?adjusted=true&apiKey=15QmMowx5gfJE_p1AL_gGzjGQm9kfYtr`)
         .then(res=> res.json())
         .then(data => {
-            console.log(data)
             setPrice(data.close)
             setVolume(data.volume)
         });
@@ -87,7 +83,6 @@ function StockCard () {
             useEffect(() => {
                 randomStock()
             }, [])
-    
         }
 
 
@@ -154,8 +149,30 @@ function StockCard () {
         navigate('/stockmetrics', {state: stockMetrics})
     }
 
+    const handleSwipe = (event) => {
+        console.log('onSwipe', event.direction);
+
+    
+        switch (event.direction) {
+          case 'left': 
+          console.log('Left swipe detected');
+          randomStock()
+            break;
+          case 'right':
+            console.log('Right swipe detected');
+            randomStock()
+            break;
+          default:
+            console.log('Unexpected swipe direction:', event.direction);
+        }
+      };
+    
+      const events = useFingerEvents({
+        onSwipe: handleSwipe,
+      });
+
 return (
-<div className="card">  
+<div className="card" {...events} >  
  
         <div className="stock-profile">
             {frontCard ? (
@@ -193,7 +210,7 @@ return (
                 <div className="stock-details">
                     <p className="stock-volume">Volume: ${numberWithCommas(volume)}</p>
                     <p className="stock-cap">Market Cap: ${numberWithCommas(stockData.market_cap)}</p>
-                    <p className="stock-bio">About me: {stockData.description}</p>
+                    <p className="stock-bio"><strong>About me: </strong>{stockData.description}</p>
                     <button className="button-4" onClick={() => handleMetrics(stockData)}>See Company Metrics</button>  
                 </div>       
             </div> )}

@@ -18,13 +18,13 @@ return (
             <div className="stock-welcome-info">
                 <h4>Welcome to Ticker!</h4>
                 <h4 className="welcome-line2">The #1 Stock Matchmaker</h4>
-                <p className="instructions">Instructions:
-                    Everytime you click - you'll be matched with a new, random stock. Click on the stock picture to see detailed information about the stocks trade history, trade volume, and company information. If you want to invest in this stock, click the likes button to add it to your "Matches" list. 
-                    Looking for a specific stock in particular? Use the "Search" bar to search by the company's ticker symbol.
-                    
-                    To get started, click below!
-                </p>
-                <button className="button-5"onClick={handleClick}> Begin </button>
+                <p className="instructions-title">Instructions: </p>
+                <p className="instructions"> Every time you swipe, you’ll be matched with a new, random stock. Tap the stock picture to see company information and metrics such as trading volume and history.</p>
+                <p className="instructions">  Swipe right to save a stock to your “Matches” list. You can revist your saved stock at any time and even open them in your Robinhood or Etrade account. </p>
+                <p className="instructions">Not interested? Swipe left to move onto a new stock. Looking for a specific stock? Click on the search icon to search by the company’s ticker symbol. </p>
+                <p className="instructions">Click below to get started!</p>
+
+                <button className="button-5"onClick={handleClick}> Start</button>
             </div>
     </div>
 )
